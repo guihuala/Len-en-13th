@@ -209,6 +209,9 @@ func splash(action_stage: int = -1) -> void:
 	if GameState.reduced_motion: return
 	var origin=feedback_local_position()
 	var effect_stage: int=current_stage if action_stage<0 else clampi(action_stage,0,6)
+	if effect_stage==3:
+		# Align the atlas roots with the painted trunk's base at every window size.
+		origin=current_layer.position+Vector2(240,434)*current_layer.size/480.0
 	action_overlay.trigger(origin / size.max(Vector2.ONE), effect_stage)
 
 func _process(delta: float) -> void:

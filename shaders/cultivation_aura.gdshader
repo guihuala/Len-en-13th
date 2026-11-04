@@ -77,19 +77,8 @@ vec2 tap_light(vec2 uv, vec3 tap) {
 		}
 		light += exp(-dot(p, p) / 0.018) * 0.10;
 	} else if (action_stage == 3) {
-		// Guide: three soft curved branch paths carry beads towards their tips.
-		float y = -p.y + 0.075;
-		float u = clamp(y / 0.30, 0.0, 1.0);
-		for (int i = 0; i < 3; i++) {
-			float side = float(i) - 1.0;
-			float x = side * (u * u * 0.22 + sin(u * 3.14159) * 0.025);
-			float route = stroke(p.x - x, 0.0045) * step(0.0, y) * step(y, 0.30 * ease);
-			ink += route * 0.45;
-			light += route * 0.24;
-			float v = ease;
-			vec2 tip = vec2(side * (v * v * 0.22 + sin(v * 3.14159) * 0.025), 0.075 - v * 0.30);
-			light += exp(-dot(p - tip, p - tip) / 0.00010) * 1.1;
-		}
+		// Root guidance uses the hand-painted atlas overlay.
+		// Keep only the shared boost aura from this shader.
 	} else if (action_stage == 4) {
 		// Prune: a feathered crescent sweeps through, followed by falling cut leaves.
 		vec2 q = p * vec2(0.85, 1.35);
