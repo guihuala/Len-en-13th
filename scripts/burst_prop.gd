@@ -20,19 +20,19 @@ func refresh() -> void:
 	disabled=GameState.paused or not available
 	var hint: String
 	if active:
-		hint=tr("加速中 · 还剩 %s 秒") % str(int(ceil(GameState.burst_remaining)))
+		hint=tr("加速中 · 还剩%s秒") % str(int(ceil(GameState.burst_remaining)))
 	elif available:
-		hint=tr("点击生长药剂，临时收益 ×3")
+		hint=tr("点击生长药剂，临时收益×3")
 	else:
 		var cooldown: int=int(ceil(maxf(0,float(GameState.balance.get("burst",{}).get("cooldown",0))-GameState.burst_charge)))
-		hint=tr("%s 秒后可用") % str(cooldown)
-	title_label.text=tr("加速 ×%s") % str(int(GameState.balance.burst.multiplier))
+		hint=tr("%s秒后可用") % str(cooldown)
+	title_label.text=tr("加速×%s") % str(int(GameState.balance.burst.multiplier))
 	if active:
-		status_label.text=tr("剩余 %s 秒") % str(int(ceil(GameState.burst_remaining)))
+		status_label.text=tr("剩余%s秒") % str(int(ceil(GameState.burst_remaining)))
 	elif available:
 		status_label.text=""
 	else:
-		status_label.text=tr("冷却 %s 秒") % str(int(ceil(maxf(0,float(GameState.balance.burst.cooldown)-GameState.burst_charge))))
+		status_label.text=tr("冷却%s秒") % str(int(ceil(maxf(0,float(GameState.balance.burst.cooldown)-GameState.burst_charge))))
 	status_label.visible=not available
 	tooltip_text=tr("生长药剂")+"\n"+hint
 	set_meta("action_label",tooltip_text)

@@ -37,7 +37,7 @@ offset_right = -16.0
 offset_bottom = 103.0
 grow_horizontal = 2
 mouse_default_cursor_shape = 2
-text = "增加 200 生长值"
+text = "增加200生长值"
 
 [node name="ClickRipple" type="Control" parent="Action1"]
 clip_contents = true
@@ -56,7 +56,7 @@ offset_right = -16.0
 offset_bottom = 157.0
 grow_horizontal = 2
 mouse_default_cursor_shape = 2
-text = "增加 2,000 生长值"
+text = "增加2,000生长值"
 
 [node name="ClickRipple" type="Control" parent="Action2"]
 clip_contents = true

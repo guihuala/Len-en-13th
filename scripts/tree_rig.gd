@@ -6,6 +6,7 @@ static var forms: Dictionary = {}
 static var shared_textures: Dictionary = {}
 var moving_parts: Array = []
 var expressions: Array = []
+var reaction_bubbles: Array[TextureRect] = []
 var heads: Array = []
 var reaction_age: float = -1.0
 var reaction_rapid: bool = false
@@ -104,6 +105,9 @@ func configure(form: String) -> bool:
 				head.parts.append({"node":placement,"rest":placement.transform})
 		else:
 			add_child(piece)
+		if str(entry.get("name", "")).contains("惊叹气泡"):
+			piece.visible=false
+			reaction_bubbles.append(piece)
 		if entry.kind=="base":
 			if str(entry.get("name", "")).contains("表情"):
 				expressions.append({"node":piece,"head":head,"rest":{"texture":texture,"rect":entry.rect}})
@@ -144,6 +148,10 @@ func head_response(group: Dictionary) -> Dictionary:
 		"strength":pow(maxf(0.0,1.0-age/float(group.duration)),2),"style":style}
 
 func pose(clock: float, still: bool) -> void:
+	for bubble in reaction_bubbles:
+		bubble.visible=reaction_age>=0.0 and reaction_age<0.65 and not GameState.paused
+		if not bubble.visible: continue
+		bubble.modulate.a=1.0 if still else minf(reaction_age/0.045,1.0)*clampf((0.65-reaction_age)/0.18,0.0,1.0)
 	for expression in expressions:
 		var response=head_response(expression.head)
 		set_expression(expression.node,(surprise_face if response.startled else smile_face) if response.active else expression.rest)

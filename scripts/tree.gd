@@ -10,12 +10,11 @@ const LEAF_BUD_FORM = "stage_02a_leaf_bud"
 const HATCHING_FORM = "stage_02b_hatching"
 const MINI_TEXTURE = preload("res://assets/art/regions/tree__mini_tabinoki.tres")
 const TreeRig = preload("res://scripts/tree_rig.gd")
-const CultivationFX = preload("res://scripts/cultivation_fx.gd")
 const BOUNDS = [Rect2(70,80,340,390),Rect2(90,90,300,380),Rect2(50,35,380,435),Rect2(5,0,470,478),Rect2(5,0,470,478),Rect2(5,0,470,478),Rect2(5,0,470,478)]
 const ANCHORS = [Vector2(240,325),Vector2(240,220),Vector2(240,130),Vector2(240,105),Vector2(240,240),Vector2(240,240),Vector2(240,240)]
 
 var water_overlay: Node2D
-var action_overlay: Node2D
+var action_overlay: ColorRect
 var art_root: Control
 var current_layer: TextureRect
 var previous_layer: TextureRect
@@ -50,8 +49,7 @@ func _ready() -> void:
 	water_overlay=Node2D.new()
 	add_child(water_overlay)
 	water_overlay.draw.connect(draw_water_overlay)
-	action_overlay=CultivationFX.new()
-	add_child(action_overlay)
+	action_overlay=$CultivationFX
 	set_stage(GameState.stage,false)
 	GameState.changed.connect(sync_growth_visual)
 	sync_ending(false)
@@ -211,23 +209,7 @@ func splash(action_stage: int = -1) -> void:
 	if GameState.reduced_motion: return
 	var origin=feedback_local_position()
 	var effect_stage: int=current_stage if action_stage<0 else clampi(action_stage,0,6)
-	if effect_stage>0:
-		action_overlay.emit_action(effect_stage,origin,size)
-		return
-	var effect_scale: float=clampf(minf(size.x,size.y)/280.0,0.7,1.35)
-	water_ripples.append({"p":origin,"age":0.0,"scale":effect_scale})
-	if water_ripples.size()>6: water_ripples.pop_front()
-	for i in range(28):
-		var angle: float=lerpf(-PI+0.16,-0.16,float(i)/27.0)+randf_range(-0.12,0.12)
-		var speed: float=randf_range(110,235)*effect_scale
-		var lifetime: float=randf_range(0.65,0.9)
-		drops.append({"p":origin+Vector2(randf_range(-8,8),0)*effect_scale,
-			"v":Vector2(cos(angle),sin(angle))*speed,"life":lifetime,"duration":lifetime,
-			"radius":randf_range(1.8,3.8)*effect_scale,"gravity":420.0*effect_scale,
-			"floor":origin.y+randf_range(8,22)*effect_scale,"landed":false})
-	# Bound the effect during rapid watering instead of stacking unlimited particles.
-	if drops.size()>168: drops=drops.slice(drops.size()-168)
-	water_overlay.queue_redraw()
+	action_overlay.trigger(origin / size.max(Vector2.ONE), effect_stage)
 
 func _process(delta: float) -> void:
 	if action_overlay!=null: action_overlay.advance(delta)

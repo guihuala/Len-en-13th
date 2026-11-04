@@ -4,6 +4,8 @@ const Motion = preload("res://scripts/motion.gd")
 var remaining: float = 0
 
 func present(message: String) -> void:
+	modulate.a=1.0
+	if visible: Motion.reveal($Result,0.14)
 	$Result.text=message
 	remaining=4
 	update_visibility()
@@ -25,4 +27,6 @@ func _process(delta: float) -> void:
 	# The purchase result waits until the original story or purchase joke closes.
 	if visible:
 		remaining=maxf(0,remaining-delta)
+		if remaining<0.35 and not GameState.reduced_motion: modulate.a=clampf(remaining/0.35,0.0,1.0)
+		if GameState.reduced_motion: modulate.a=1.0
 		if remaining<=0: hide()

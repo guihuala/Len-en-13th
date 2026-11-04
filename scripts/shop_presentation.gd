@@ -26,7 +26,7 @@ static func apply(button: Button, state: String, bulk: bool = false) -> void:
 		button.add_theme_color_override(slot,ink)
 
 static func unlock_hint(item: Dictionary, target: String, full_title: bool = false) -> String:
-	if GameState.clicks<3: return localized("先培养 3 次")
+	if GameState.clicks<3: return localized("先培养3次")
 	var stage: int=int(item.get("shop_stage",0))
 	if GameState.stage<stage:
 		return localized("到达：%s") % localized(str(GameState.balance.stage_tabs[stage]))
@@ -38,7 +38,7 @@ static func unlock_hint(item: Dictionary, target: String, full_title: bool = fal
 				if event.id==event_id: title=str(event.title)
 		return localized("完成剧情：%s") % localized(title)
 	if item.id=="planet_core":
-		return localized("累计达到 %s") % target
+		return localized("累计达到%s") % target
 	return localized("等待剧情")
 
 static func localized(key: String) -> String:

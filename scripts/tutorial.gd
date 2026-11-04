@@ -43,13 +43,13 @@ func refresh() -> void:
 	target=host.tree
 	match step:
 		0:
-			heading.text=tr("1/4 浇三次水")
+			heading.text=tr("1/4浇三次水")
 			body.text=tr("点击中央的旅之木进行培养。\n%d/3") % mini(GameState.clicks,3)
 		1,2:
 			var item: Dictionary=GameState.upgrades[0 if step==1 else 1]
 			var cost: String=host.fmt(GameState.price(item))
-			heading.text=tr("2/4 买水壶" if step==1 else "3/4 让它自己长")
-			body.text=(tr("攒到 %s 生长值，购买「可疑的水壶」。\n每次浇水获得更多生长值。") if step==1 else tr("攒到 %s，购买「自动滴灌」。\n不用持续点击也会增长。")) % cost
+			heading.text=tr("2/4买水壶" if step==1 else "3/4让它自己长")
+			body.text=(tr("攒到%s生长值，购买「可疑的水壶」。\n每次浇水获得更多生长值。") if step==1 else tr("攒到%s，购买「自动滴灌」。\n不用持续点击也会增长。")) % cost
 			if host.selected_shop_stage!=0:
 				target=host.shop_selector
 			elif GameState.growth>=GameState.price(item):
@@ -58,7 +58,7 @@ func refresh() -> void:
 				target=host.ui.shop_toggle
 				body.text=tr("展开道具栏继续购买。")
 		3:
-			heading.text=tr("4/4 随便种吧")
+			heading.text=tr("4/4随便种吧")
 			body.text=tr("自动设施达10／25／50组时收益翻倍。\n「凑整」批量购买；点下方药剂临时收益×3。")
 			target=host.ui.burst
 	skip_button.visible=step<3

@@ -6,6 +6,7 @@ const Motion = preload("res://scripts/motion.gd")
 const UITheme = preload("res://scripts/ui_theme.gd")
 const CREDITS_TEXT = "[center]たびのきの木\n\n[b]制作[/b]\nmoku\n\n[b]原作[/b]\nJynX · 連縁Project\n\n[b]引擎[/b]\nGodot Engine\n\n[b]字体[/b]\n寒蝉半圆体 · ChillType\nZen Maru Gothic · The Zen Maru Gothic Project Authors\nNoto Sans SC / JP · Adobe / Google\nSIL Open Font License 1.1\n\n非官方同人作品\n感谢你来种树。[/center]"
 var menu_time: float = 0.0
+var motion_was_reduced: bool = false
 var credits_button: Button
 var credits_dialog: Panel
 var credits_body: RichTextLabel
@@ -76,6 +77,8 @@ func _ready() -> void:
 	Motion.reveal(self,0.24)
 
 func _process(delta: float) -> void:
+	if GameState.reduced_motion and not motion_was_reduced: Motion.settle(self)
+	motion_was_reduced=GameState.reduced_motion
 	# Only decorative artwork moves; menu controls keep stable hit areas.
 	if GameState.reduced_motion:
 		title.scale=Vector2.ONE
@@ -162,7 +165,7 @@ func refresh_text() -> void:
 	translate_children(self)
 	credits_body.text=tr(CREDITS_TEXT)
 	start_button.text=tr("继续栽培" if has_progress else "开始栽培")
-	save_info.text=tr("累计生长 %s") % format_number(GameState.lifetime)
+	save_info.text=tr("累计生长%s") % format_number(GameState.lifetime)
 	ButtonIcons.apply(language_button,"language","简体中文" if GameState.language=="ja" else "日本語","中文" if GameState.language=="ja" else "日本語")
 	ButtonIcons.apply(new_button,"restart",tr("重新开始"),tr("重新开始"))
 	start_button.icon=ArtCatalog.texture("res://assets/ui/icons/play.svg")

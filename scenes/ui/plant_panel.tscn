@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bbcsxbuhuyp7d"]
+[gd_scene load_steps=16 format=3 uid="uid://bbcsxbuhuyp7d"]
 
 [ext_resource type="Shader" path="res://shaders/paper_background.gdshader" id="14_cnxfm"]
 [ext_resource type="Texture2D" uid="uid://l34ffsx8scbo" path="res://assets/art/backgrounds/nature_01.png" id="15_lqgot"]
@@ -14,6 +14,8 @@
 [ext_resource type="Theme" path="res://assets/ui/game_theme.tres" id="ui_theme"]
 
 [ext_resource type="PackedScene" path="res://scenes/ui/growth_props.tscn" id="growth_props"]
+
+[ext_resource type="PackedScene" path="res://scenes/ui/cultivation_aura.tscn" id="cultivation_aura"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q0bxc"]
 shader = ExtResource("14_cnxfm")
@@ -116,7 +118,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 7.0
 offset_right = -7.0
-offset_top = -86.0
+offset_top = -62.0
 offset_bottom = -7.0
 grow_horizontal = 2
 mouse_filter = 2
@@ -128,9 +130,9 @@ layout_mode = 0
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 16.0
-offset_top = -78.0
+offset_top = -54.0
 offset_right = 148.0
-offset_bottom = -54.0
+offset_bottom = -30.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.937, 0.949, 0.831, 1)
 theme_override_font_sizes/font_size = 14
@@ -148,7 +150,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 8.0
 offset_right = -8.0
-offset_bottom = -86.0
+offset_bottom = -62.0
 grow_horizontal = 2
 mouse_filter = 2
 
@@ -203,11 +205,11 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 16.0
-offset_top = -24.0
+offset_top = -20.0
 offset_right = -16.0
-offset_bottom = -16.0
+offset_bottom = -12.0
 grow_horizontal = 2
-mouse_filter = 2
+mouse_filter = 1
 theme_override_styles/background = ExtResource("journal_progress_track")
 theme_override_styles/fill = ExtResource("journal_progress_fill")
 max_value = 200.0
@@ -220,9 +222,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 160.0
-offset_top = -78.0
+offset_top = -54.0
 offset_right = -16.0
-offset_bottom = -54.0
+offset_bottom = -30.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.890, 0.918, 0.808, 1)
 theme_override_font_sizes/font_size = 14
@@ -231,20 +233,6 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 
-[node name="NextStageLabel" type="Label" parent="."]
-unique_name_in_owner = true
-layout_mode = 0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 16.0
-offset_top = -53.0
-offset_right = -16.0
-offset_bottom = -29.0
-mouse_filter = 2
-theme_override_colors/font_color = Color(0.890, 0.918, 0.808, 1)
-theme_override_font_sizes/font_size = 14
-text = "下一阶段：发芽了"
-vertical_alignment = 1
-
 [node name="GrowthProps" parent="TreeArea" instance=ExtResource("growth_props")]
+
+[node name="CultivationFX" parent="TreeArea/TreeView" instance=ExtResource("cultivation_aura")]

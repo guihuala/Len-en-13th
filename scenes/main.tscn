@@ -65,8 +65,26 @@ offset_left = 21.0
 offset_right = -21.0
 grow_vertical = 2
 
-[node name="ShopPanel" parent="Interface" instance=ExtResource("ui_shop_panel")]
+[node name="ShopDock" type="MarginContainer" parent="Interface"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = -292.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="ShopPanel" parent="Interface/ShopDock" instance=ExtResource("ui_shop_panel")]
+layout_mode = 2
 
 [node name="MenuButton" type="Button" parent="Interface"]
 unique_name_in_owner = true
@@ -105,6 +123,7 @@ mouse_filter = 2
 script = ExtResource("12_jsio6")
 
 [node name="Stats" parent="Interface" instance=ExtResource("ui_stats_panel")]
+layout_mode = 1
 
 [node name="DebugPanel" parent="Interface" instance=ExtResource("ui_debug_panel")]
 

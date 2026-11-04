@@ -40,46 +40,38 @@ texture = ExtResource("29_jh7rh")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Title" type="Label" parent="."]
+[node name="Text" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = 52.0
 offset_top = 4.0
 offset_right = -132.0
-offset_bottom = 32.0
-grow_horizontal = 2
+offset_bottom = -4.0
+mouse_filter = 1
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="Title" type="Label" parent="Text"]
+layout_mode = 2
 theme_override_colors/font_color = Color(0.22, 0.184, 0.137, 1)
 theme_override_font_sizes/font_size = 14
 text = "商品名称"
 autowrap_mode = 3
 
-[node name="Effect" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = 52.0
-offset_top = 36.0
-offset_right = -132.0
-offset_bottom = 62.0
-grow_horizontal = 2
+[node name="Effect" type="Label" parent="Text"]
+layout_mode = 2
 theme_override_colors/font_color = Color(0.4, 0.337, 0.243, 1)
 theme_override_font_sizes/font_size = 14
 text = "效果"
 clip_text = true
 
-[node name="Price" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = 52.0
-offset_top = 66.0
-offset_right = -132.0
-offset_bottom = 94.0
-grow_horizontal = 2
+[node name="Price" type="Label" parent="Text"]
+layout_mode = 2
 theme_override_colors/font_color = Color(0.22, 0.184, 0.137, 1)
 theme_override_font_sizes/font_size = 14
-text = "持有 0"
+text = "持有0"
 clip_text = true
 text_overrun_behavior = 3
 
@@ -157,15 +149,3 @@ anchor_bottom = 1.0
 mouse_filter = 2
 script = ExtResource("12_jsio6")
 
-[node name="Badge" type="Label" parent="Icon/ItemHelp"]
-layout_mode = 0
-offset_left = 24.0
-offset_top = 24.0
-offset_right = 44.0
-offset_bottom = 44.0
-mouse_filter = 2
-theme_override_colors/font_color = Color(0.27, 0.36, 0.21, 1)
-theme_override_font_sizes/font_size = 14
-text = "?"
-horizontal_alignment = 1
-vertical_alignment = 1

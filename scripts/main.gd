@@ -89,6 +89,8 @@ var layout_width: float = 390
 var shop_top: float = 0
 var tutorial: Control
 var buy_to_milestone: bool = false
+var shop_motion: Tween
+var motion_was_reduced: bool = false
 var tones: Dictionary = {
 	"water": preload("res://assets/audio/water.wav"),
 	"fertilize": preload("res://assets/audio/fertilize.wav"),
@@ -113,7 +115,10 @@ func _ready() -> void:
 	resized.connect(layout_ui)
 	layout_ui()
 	refresh()
-	Motion.reveal(self,0.22)
+	motion_was_reduced=GameState.reduced_motion
+	Motion.reveal(ui.stats,0.18)
+	Motion.reveal(ui.plant_panel,0.24,0.04)
+	Motion.reveal(ui.shop_panel,0.22,0.08)
 
 # Layout and styles are authored in scenes/ui/*.tscn; main.tscn composes them.
 # Resolve unique names through each scene root because instances own their children.
@@ -121,7 +126,7 @@ func bind_scene_nodes() -> void:
 	ui={
 		"plant_panel":%PlantPanel, "studio_view":%PlantPanel.get_node("%StudioView"),
 		"camera_header":%PlantPanel.get_node("%CameraHeader"), "camera_footer":%PlantPanel.get_node("%CameraFooter"),
-		"shop_panel":%ShopPanel, "menu":%MenuButton, "stats":%Stats,
+		"shop_panel":%ShopPanel, "shop_dock":$Interface/ShopDock, "menu":%MenuButton, "stats":%Stats,
 		"stat_growth":%Stats.get_node("%GrowthCaption"), "stat_rate":%Stats.get_node("%RateCaption"),
 		"buy_mode":%ShopPanel.get_node("%BuyModeButton"), "shop_selector":%ShopPanel.get_node("%ShopStageSelector"),
 		"shop_toggle":%ShopPanel.get_node("%ShopToggle"),
@@ -162,7 +167,7 @@ func bind_scene_nodes() -> void:
 	ui.burst.pressed.connect(activate_burst)
 	ui.buy_mode.pressed.connect(toggle_buy_mode)
 	ui.shop_toggle.pressed.connect(toggle_shop)
-	expanded_shop_top=ui.shop_panel.offset_top
+	expanded_shop_top=ui.shop_dock.offset_top
 	expanded_plant_bottom=ui.plant_panel.offset_bottom
 	dialog.gui_input.connect(_on_dialog_gui_input)
 	ButtonIcons.apply(ui.menu,"menu",tr("菜单"))
@@ -182,7 +187,7 @@ func bind_scene_nodes() -> void:
 		shop_list.add_child(card)
 		var buy: Button=card.get_node("Purchase/BuyButton")
 		cards[id]=card
-		card_labels[id]={"title":card.get_node("Title"),"tag":card.get_node("Effect"),"icon":card.get_node("Icon"),"price":card.get_node("Price")}
+		card_labels[id]={"title":card.get_node("Text/Title"),"tag":card.get_node("Text/Effect"),"icon":card.get_node("Icon"),"price":card.get_node("Text/Price")}
 		shop_buttons[id]=buy
 		card_labels[id].title.add_theme_font_override("font",UITheme.emphasis_font())
 		card_labels[id].title.add_theme_color_override("font_color",Color("344b30"))
@@ -197,11 +202,6 @@ func bind_scene_nodes() -> void:
 		info_button.tooltip_text=tr("查看道具说明")
 		info_button.set_meta("action_label",info_button.tooltip_text)
 		info_button.pressed.connect(show_item_details.bind(id))
-		var badge: Label=info_button.get_node("Badge")
-		info_button.mouse_entered.connect(func(): badge.add_theme_color_override("font_color",Color("8a603a")))
-		info_button.mouse_exited.connect(func(): badge.add_theme_color_override("font_color",Color("455b36")))
-		info_button.focus_entered.connect(func(): badge.add_theme_color_override("font_color",Color("8a603a")))
-		info_button.focus_exited.connect(func(): badge.add_theme_color_override("font_color",Color("455b36")))
 		card.tooltip_text=tr(str(item.note))
 		buy.pressed.connect(purchase_from_card.bind(id))
 		buy.gui_input.connect(track_shop_gesture.bind(id))
@@ -293,36 +293,40 @@ func refresh() -> void:
 		update_shop_view()
 	value_label.text=fmt(GameState.growth)
 	rate_label.text=fmt(GameState.per_second())
-	ui.stat_rate.text=(tr("临时×3·%ss") % int(ceil(GameState.burst_remaining))) if GameState.burst_remaining>0 else tr("每秒增长")
+	ui.stat_rate.text=tr("每秒增长")
 	if displayed_stage!=GameState.stage or displayed_ending!=("ending" in GameState.triggered): layout_tree()
 	stage_label.text=tr(GameState.balance.stage_names[GameState.stage])
-	var next_label: Label=%PlantPanel.get_node("%NextStageLabel")
+	if GameState.stage==1:
+		if tree.current_variant==1: stage_label.text=tr("小叶苞鼓起来啦")
+		elif tree.current_variant==2: stage_label.text=tr("小脑袋探出来啦")
+	var next_hint: String
 	if "ending" in GameState.triggered:
-		next_label.text=tr("栽培结束。仍可继续栽培。")
+		next_hint=tr("栽培结束。仍可继续栽培。")
 	elif GameState.stage<GameState.THRESHOLDS.size()-1:
-		next_label.text=tr("下一阶段：%s") % tr(str(GameState.balance.stage_names[GameState.stage+1]))
+		next_hint=tr("下一阶段：%s") % tr(str(GameState.balance.stage_names[GameState.stage+1]))
 	else:
-		next_label.text=tr("下一目标：栽培结束")
+		next_hint=tr("下一目标：栽培结束")
+	stage_label.tooltip_text=stage_label.text+"\n"+next_hint
+	progress.tooltip_text=next_hint
+	progress_label.tooltip_text=next_hint
 	audience.visible="nursery" in GameState.triggered or int(GameState.counts.get("seed_bank",0))>0
 	growth_props.refresh()
 	var phrases: Array=GameState.balance.stage_hints
 	current_hint=tr(phrases[GameState.stage] if GameState.clicks>=3 else "浇点水。")
 	if GameState.stage==1:
-		if tree.current_variant==1: current_hint=tr("「帽子长出来了。……还挺快。」")
-		elif tree.current_variant==2: current_hint=tr("「哦！帽子！……先长这个啊？！」")
+		if tree.current_variant==1: current_hint=tr("「叶子合成小苞啦，里面藏着什么呀？」")
+		elif tree.current_variant==2: current_hint=tr("「哇，小脑袋从叶苞里探出来啦～！」")
 	if purchase_quip_remaining>0 and GameState.clicks>=3:
 		current_hint=tr(purchase_quip)
-	elif GameState.burst_remaining>0:
-		current_hint=tr("加速中 · 还剩 %s 秒") % str(int(ceil(GameState.burst_remaining)))
 	if current_hint!=previous_hint and speech_bubble.visible and not stage_changed:
 		speech_bubble.replace_text(current_hint)
-	ui.buy_mode.text=tr("凑整") if buy_to_milestone else tr("购买 ×1")
+	ui.buy_mode.text=tr("凑整") if buy_to_milestone else tr("购买×1")
 	ui.buy_mode.tooltip_text=tr("凑整") if not buy_to_milestone else "×1"
 	var target: float=float(GameState.balance.ending_lifetime) if GameState.stage==GameState.THRESHOLDS.size()-1 else GameState.THRESHOLDS[GameState.stage+1]
 	progress.max_value=target
-	progress.value=GameState.lifetime
-	progress_label.text=tr("累计 %s / %s") % [fmt(GameState.lifetime),fmt(target)]
-	if "ending" in GameState.triggered: progress_label.text=tr("累计 %s") % fmt(GameState.lifetime)
+	Motion.smooth_progress(progress,GameState.lifetime)
+	progress_label.text=tr("累计%s / %s") % [fmt(GameState.lifetime),fmt(target)]
+	if "ending" in GameState.triggered: progress_label.text=tr("累计%s") % fmt(GameState.lifetime)
 	for u in GameState.upgrades:
 		var b: Button=shop_buttons[u.id]
 		var owned: int=int(GameState.counts.get(u.id,0))
@@ -335,28 +339,28 @@ func refresh() -> void:
 		card_labels[u.id].title.text=tr(str(u.name))
 		var state_text: String=tr("已购买" if bought else ("已满" if full else ("等待剧情" if locked else ("不足" if not can_afford else "购买"))))
 		var next: int=GameState.next_production_milestone(u)
-		var details: String=tr("持有 %d") % owned if u.repeat else tr("一次性")
-		if next>0: details=tr("%d 组 · %d 组翻倍") % [owned,next]
+		var details: String=tr("持有%d") % owned if u.repeat else tr("一次性")
+		if next>0: details=tr("%d组 · %d组翻倍") % [owned,next]
 		var effect: String=tr(str(u.tag))
-		if float(u.click)>0: effect=tr("点击 +%s") % fmt(GameState.tool_click_gain(u))
+		if float(u.click)>0: effect=tr("点击+%s") % fmt(GameState.tool_click_gain(u))
 		elif float(u.rate)>0:
-			effect=tr("自动 +%s/秒") % fmt(GameState.next_rate_gain(u,quantity))
-		elif u.id=="harujion": effect=tr("全部产量 ×2")
+			effect=tr("自动+%s/秒") % fmt(GameState.next_rate_gain(u,quantity))
+		elif u.id=="harujion": effect=tr("全部产量×2")
 		elif u.id=="planet_core": effect=tr("结束直播")
 		if float(u.get("click_share",0))>0:
-			details=tr("联动自动 %s%%") % str(int(round(float(u.click_share)*100)))
-		if GameState.burst_remaining>0 and (float(u.click)>0 or float(u.rate)>0):
-			effect="×3 · "+effect
+			details=tr("联动自动%s%%") % str(int(round(float(u.click_share)*100)))
 		var status_label: Label=card_labels[u.id].payback
-		status_label.visible=not locked and not bought and not full and (float(u.rate)>0 or not can_afford)
+		status_label.visible=not locked and not bought and not full and not can_afford
 		if status_label.visible:
-			status_label.text=(tr("还差 %s") % fmt(ceil(maxf(0,cost-GameState.growth)))) if not can_afford else (tr("回本 %ss") % fmt(ceil(GameState.payback_seconds(u,quantity))))
-			status_label.add_theme_color_override("font_color",Color("79503a") if not can_afford else UITheme.text_color(MUTED))
+			status_label.text=tr("还差%s") % fmt(ceil(maxf(0,cost-GameState.growth)))
+			status_label.add_theme_color_override("font_color",Color("79503a"))
 		card_labels[u.id].tag.text=effect
+		card_labels[u.id].tag.visible=u.id!="planet_core"
 		var inventory_details: String=details
 		if locked and not bought and not full:
 			details=ShopPresentation.unlock_hint(u,fmt(float(GameState.balance.ending_lifetime)))
-		card_labels[u.id].price.text=details
+		card_labels[u.id].price.text=details if locked and not bought and not full else (tr("持有%d") % owned if u.repeat else "")
+		card_labels[u.id].price.visible=not card_labels[u.id].price.text.is_empty()
 		card_labels[u.id].price.add_theme_color_override("font_color",Color("65694f"))
 		b.icon=ArtCatalog.texture("res://assets/art/regions/ui__icons__lock.tres") if locked and not bought and not full else null
 		b.add_theme_constant_override("icon_max_width",18)
@@ -365,33 +369,34 @@ func refresh() -> void:
 		if locked and u.id=="planet_core" and str(u.get("requires_event","")) in GameState.triggered: b.text=tr("目标\n未达成")
 		if not bought and not full and not locked and can_afford and quantity>1: b.text=("×%d\n" % quantity)+fmt(cost)
 		if buy_to_milestone and u.repeat and not locked and not full:
-			b.text="×%d\n" % quantity + (tr("合计 %s") if can_afford else tr("不足 %s")) % fmt(cost)
-		b.tooltip_text=state_text+" · "+tr(str(u.name))+"\n"+(tr("%s 生长值") % fmt(cost))+"\n"+tr(str(u.note))
+			b.text="×%d\n" % quantity + (tr("合计%s") if can_afford else tr("不足%s")) % fmt(cost)
+		b.tooltip_text=state_text+" · "+tr(str(u.name))+"\n"+(tr("%s生长值") % fmt(cost))+"\n"+tr(str(u.note))
+		b.tooltip_text+="\n"+inventory_details
 		if float(u.get("click_share",0))>0:
-			b.tooltip_text+="\n"+(tr("每次操作额外获得 %s 基础收益和 %s%% 的自动产量。") % [fmt(float(u.click)*GameState.multiplier()*GameState.burst_multiplier()),str(int(round(float(u.click_share)*100)))])
+			b.tooltip_text+="\n"+(tr("每次操作额外获得%s基础收益和%s%% 的自动产量。") % [fmt(float(u.click)*GameState.multiplier()*GameState.burst_multiplier()),str(int(round(float(u.click_share)*100)))])
 		elif float(u.rate)>0:
 			var total_rate: float=float(u.rate)*owned*GameState.production_multiplier(u)*GameState.multiplier()*GameState.burst_multiplier()
-			b.tooltip_text+="\n"+(tr("当前合计 %s/秒；本次增加 %s/秒。") % [fmt(total_rate),fmt(GameState.next_rate_gain(u,quantity))])
+			b.tooltip_text+="\n"+(tr("当前合计%s/秒；本次增加%s/秒。") % [fmt(total_rate),fmt(GameState.next_rate_gain(u,quantity))])
 			if next>0:
-				b.tooltip_text+="\n"+(tr("再买 %d 组，本设施总产量翻倍。") % (next-owned))
+				b.tooltip_text+="\n"+(tr("再买%d组，本设施总产量翻倍。") % (next-owned))
 		elif u.id=="harujion":
 			b.tooltip_text+="\n"+tr("固定点击收益和自动产量同时翻倍，与生长药剂叠加。")
 		if buy_to_milestone and u.repeat and not locked and not full:
-			b.tooltip_text+="\n"+(tr("本次购买 %d 组 · 合计 %s 生长值") % [quantity,fmt(cost)])
+			b.tooltip_text+="\n"+(tr("本次购买%d组 · 合计%s生长值") % [quantity,fmt(cost)])
 			if next>0:
 				var needed: float=maxf(0,GameState.quantity_price(u,next-owned)-GameState.growth)
-				b.tooltip_text+="\n"+(tr("达到 %d 组翻倍还差 %s 生长值。") % [next,fmt(ceil(needed))])
+				b.tooltip_text+="\n"+(tr("达到%d组翻倍还差%s生长值。") % [next,fmt(ceil(needed))])
 		if float(u.rate)>0:
-			b.tooltip_text+="\n"+(tr("常态自动回本约 %s 秒；每次购买涨价 %s%%。") % [fmt(ceil(GameState.payback_seconds(u,quantity))),str(int(round((float(u.get("price_growth",GameState.balance.price_growth))-1)*100)))])
+			b.tooltip_text+="\n"+(tr("常态自动回本约%s秒；每次购买涨价%s%%。") % [fmt(ceil(GameState.payback_seconds(u,quantity))),str(int(round((float(u.get("price_growth",GameState.balance.price_growth))-1)*100)))])
 			b.tooltip_text+="\n"+tr("仅按常态自动产量估算，不含手动操作和临时加速。")
 		if GameState.burst_remaining>0 and (float(u.click)>0 or float(u.rate)>0):
-			b.tooltip_text+="\n"+tr("当前收益含临时 ×3，药剂结束后恢复常态。")
+			b.tooltip_text+="\n"+tr("当前收益含临时×3，药剂结束后恢复常态。")
 			var normal_gain: float=(GameState.tool_click_gain(u) if float(u.click)>0 else GameState.next_rate_gain(u,quantity))/GameState.burst_multiplier()
-			b.tooltip_text+="\n"+((tr("常态每次操作 +%s") if float(u.click)>0 else tr("常态自动 +%s/秒")) % fmt(normal_gain))
+			b.tooltip_text+="\n"+((tr("常态每次操作+%s") if float(u.click)>0 else tr("常态自动+%s/秒")) % fmt(normal_gain))
 		if locked and not bought and not full:
 			b.tooltip_text+="\n"+ShopPresentation.unlock_hint(u,fmt(float(GameState.balance.ending_lifetime)),true)
 		elif not can_afford and not bought and not full:
-			b.tooltip_text+="\n"+status_label.text+"\n"+inventory_details
+			b.tooltip_text+="\n"+status_label.text
 		cards[u.id].tooltip_text=b.tooltip_text
 		b.set_meta("action_label",b.tooltip_text)
 		var icon: TextureRect=card_labels[u.id].icon
@@ -427,8 +432,17 @@ func toggle_shop() -> void:
 func set_shop_collapsed(collapsed: bool) -> void:
 	shop_collapsed=collapsed
 	ui.shop_panel.add_theme_stylebox_override("panel",UITheme.asset_style("plain" if collapsed else "panel_drawer"))
-	ui.shop_panel.offset_top=-64.0 if collapsed else expanded_shop_top
-	ui.plant_panel.offset_bottom=-64.0 if collapsed else expanded_plant_bottom
+	if shop_motion!=null and shop_motion.is_valid(): shop_motion.kill()
+	var shop_target: float=-64.0 if collapsed else expanded_shop_top
+	var plant_target: float=-64.0 if collapsed else expanded_plant_bottom
+	if GameState.reduced_motion:
+		ui.shop_dock.offset_top=shop_target
+		ui.plant_panel.offset_bottom=plant_target
+	else:
+		shop_motion=create_tween().set_parallel(true)
+		shop_motion.set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+		shop_motion.tween_property(ui.shop_dock,"offset_top",shop_target,0.24)
+		shop_motion.tween_property(ui.plant_panel,"offset_bottom",plant_target,0.24)
 	shop_selector.visible=not collapsed
 	ui.buy_mode.visible=not collapsed
 	shop_list.visible=not collapsed
@@ -439,6 +453,7 @@ func set_shop_collapsed(collapsed: bool) -> void:
 	ui.shop_toggle.offset_top=8.0
 	ui.shop_toggle.offset_bottom=52.0
 	shop_selector.get_popup().hide()
+	if not collapsed: Motion.reveal_items(shop_list)
 	refresh_milestone_tabs()
 	layout_ui()
 
@@ -449,13 +464,17 @@ func toggle_buy_mode() -> void:
 func activate_burst() -> void:
 	if GameState.activate_burst():
 		Motion.pulse_icon(rate_label)
-		speech_bubble.say(tr("临时加速 ×3"))
+		speech_bubble.say(tr("临时加速×3"),2.0)
 		tree.splash()
 		play_tone("buy")
 		refresh()
 		if purchase_quip_remaining>0: speech_bubble.say(current_hint,5.0)
 
 func _process(delta: float) -> void:
+	if GameState.reduced_motion and not motion_was_reduced:
+		Motion.settle(self)
+		set_shop_collapsed(shop_collapsed)
+	motion_was_reduced=GameState.reduced_motion
 	if not GameState.paused:
 		purchase_quip_remaining=maxf(0,purchase_quip_remaining-delta)
 	if purchase_visual_remaining>0:
@@ -484,7 +503,7 @@ func water() -> void:
 	if amount<=0: return
 	tree.splash(action_stage)
 	screen_feedback.trigger()
-	if GameState.clicks<3 or GameState.clicks%6==0: speech_bubble.say(current_hint)
+	if GameState.clicks<3: speech_bubble.say(current_hint)
 	play_tone(ACTION_TONES[action_stage])
 	var floating=preload("res://scenes/ui/floating_number.tscn").instantiate()
 	floating.text="+"+fmt(amount)
@@ -510,10 +529,10 @@ func purchase(id: String) -> void:
 	if GameState.buy(id,quantity):
 		var result: String=""
 		if not is_equal_approx(before_rate,GameState.per_second()):
-			result=tr("总产量 %s → %s/秒") % [fmt(before_rate),fmt(GameState.per_second())]
+			result=tr("总产量%s → %s/秒") % [fmt(before_rate),fmt(GameState.per_second())]
 		if not is_equal_approx(before_click,GameState.per_click()):
 			if not result.is_empty(): result+="\n"
-			result+=tr("每次操作 %s → %s") % [fmt(before_click),fmt(GameState.per_click())]
+			result+=tr("每次操作%s → %s") % [fmt(before_click),fmt(GameState.per_click())]
 		if previous==0:
 			purchase_quip=tr(str(FIRST_PURCHASE_FEEDBACK.get(id,item.note))).split("\n")[0]
 			purchase_quip_remaining=5
@@ -521,9 +540,9 @@ func purchase(id: String) -> void:
 				show_purchase_visual(id)
 		for milestone in GameState.balance.get("production_milestones",[]):
 			if float(item.rate)>0 and previous<int(milestone) and int(GameState.counts.get(id,0))>=int(milestone):
-				purchase_quip=tr("%s · %d 组达成，产量 ×2！") % [tr(str(item.name)),int(milestone)]
+				purchase_quip=tr("%s · %d组达成，产量×2！") % [tr(str(item.name)),int(milestone)]
 				purchase_quip_remaining=5
-				result=(tr("%d 组达成 · 本设施 ×2") % int(milestone))+"\n"+(tr("总产量 %s → %s/秒") % [fmt(before_rate),fmt(GameState.per_second())])
+				result=(tr("%d组达成 · 本设施×2") % int(milestone))+"\n"+(tr("总产量%s → %s/秒") % [fmt(before_rate),fmt(GameState.per_second())])
 		if not result.is_empty():
 			if GameState.burst_remaining>0: result=tr("含临时×3 · %s") % result
 			purchase_feedback.present(result)
@@ -565,7 +584,7 @@ func show_line() -> void:
 	ui.dialog_rail.hide()
 	dialog_body.text=tr(str(current_event.lines[dialog_index]))
 	story_visual.present(str(current_event.id),dialog_index)
-	story_visual.visible=not system_line or str(current_event.id).begins_with("purchase_")
+	story_visual.visible=(not system_line or str(current_event.id).begins_with("purchase_")) and str(current_event.id)!="research"
 	layout_dialog()
 	layout_dialog.call_deferred()
 	refresh()
@@ -650,7 +669,7 @@ func select_shop_stage(value: int) -> void:
 	selected_shop_stage=value
 	update_shop_view()
 	refresh()
-	Motion.reveal(shop_list,0.14)
+	Motion.reveal_items(shop_list)
 
 func update_shop_view() -> void:
 	for i in range(shop_selector.item_count):

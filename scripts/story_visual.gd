@@ -5,7 +5,7 @@ const UITheme = preload("res://scripts/ui_theme.gd")
 const ArtCatalog = preload("res://scripts/art_catalog.gd")
 const PROPS = {
 	"seed":preload("res://assets/art/regions/story__suspicious_seed.tres"),
-	"hat":preload("res://assets/art/regions/tree__mini_tabinoki.tres"),
+	"hat":preload("res://assets/art/regions/story__hat.tres"),
 	"desktop":preload("res://assets/art/detail_regions/story__game_desktop.tres"),
 	"editor":preload("res://assets/art/detail_regions/story__game_desktop.tres"),
 	"paper":preload("res://assets/art/detail_regions/story__constitution.tres"),
@@ -92,10 +92,11 @@ func present(event_id: String, index: int) -> void:
 		actors[i].hide()
 		actor_names[i].hide()
 	match mode:
-		"sprout": picture.texture=PROPS.seed if index<4 else PROPS.hat
+		# The opening happens after three clicks, before buds or hats can appear.
+		"sprout": picture.texture=PROPS.seed
 		"research":
-			picture.texture=ArtCatalog.detail_texture("res://assets/items/ink_fertilizer.svg")
-			caption.text=tr("肥料？")
+			picture.hide()
+			custom_minimum_size.y=0
 		"cloning", "purchase_dimension_box":
 			picture.hide()
 			for i in range(2):
@@ -114,8 +115,9 @@ func present(event_id: String, index: int) -> void:
 			screen_actor.flip_h=index>=3
 		"flowering":
 			picture.texture=ArtCatalog.detail_texture("res://assets/items/pollination.svg")
+			picture.visible=index>=3
 			branch.visible=index<4
-			caption.text=tr("借来修枝 · 二创剪影")
+			caption.text=tr("借来修枝 · 二创剪影") if index>=3 else ""
 		"nursery", "purchase_seed_bank":
 			picture.hide()
 			for i in range(4):
@@ -124,11 +126,12 @@ func present(event_id: String, index: int) -> void:
 			caption.text=tr("こんの木ー") if index<5 else tr("竹笋已经进场。")
 		"forest", "purchase_grove":
 			picture.texture=PROPS.paper
-			caption.text=tr(LAWS)
+			picture.visible=mode=="purchase_grove" or index>=2
+			caption.text=tr(LAWS) if picture.visible else ""
 		"ending":
 			picture.texture=PROPS.editor if index<3 else PROPS.card
 			screen_actor.visible=index<3
-			caption.text=tr("周年贺作 · 完成！") if index<3 else tr("連縁Project 13周年おめでとう！")
+			caption.text=(tr("周年贺作 · 完成！") if index==2 else "") if index<3 else tr("連縁Project 13周年おめでとう！")
 			if index>=6:
 				user_pointer=index==7
 				caption.text=tr("制作：你") if index==7 else tr("仍然可以继续栽培。") if index==8 else tr("……所以，谁做的？")
