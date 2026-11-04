@@ -1,0 +1,250 @@
+[gd_scene load_steps=15 format=3 uid="uid://bbcsxbuhuyp7d"]
+
+[ext_resource type="Shader" path="res://shaders/paper_background.gdshader" id="14_cnxfm"]
+[ext_resource type="Texture2D" uid="uid://l34ffsx8scbo" path="res://assets/art/backgrounds/nature_01.png" id="15_lqgot"]
+[ext_resource type="Script" path="res://scripts/studio_view.gd" id="16_1fsba"]
+[ext_resource type="Script" path="res://scripts/tree.gd" id="17_a5l61"]
+[ext_resource type="Script" path="res://scripts/editor_preview.gd" id="19_ey01a"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/panel_garden.tres" id="journal_plain"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/progress_fill.tres" id="journal_progress_fill"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/progress_track.tres" id="journal_progress_track"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/speech.tres" id="journal_speech"]
+[ext_resource type="Texture2D" path="res://assets/art/regions/backgrounds__nature__cloud.tres" id="scene_cloud"]
+[ext_resource type="Script" path="res://scripts/speech_bubble.gd" id="speech_script"]
+[ext_resource type="Theme" path="res://assets/ui/game_theme.tres" id="ui_theme"]
+
+[ext_resource type="PackedScene" path="res://scenes/ui/growth_props.tscn" id="growth_props"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q0bxc"]
+shader = ExtResource("14_cnxfm")
+shader_parameter/motion_strength = 0.0
+shader_parameter/grain_strength = 0.003
+shader_parameter/light_strength = 0.006
+shader_parameter/incident_strength = 0.0
+shader_parameter/stage_tint = Color(0.901961, 0.913725, 0.882353, 1)
+shader_parameter/exposure = 1.06
+
+[node name="PlantPanel" type="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 96.0
+offset_right = -12.0
+offset_bottom = -292.0
+grow_horizontal = 2
+theme = ExtResource("ui_theme")
+theme_override_styles/panel = ExtResource("journal_plain")
+
+[node name="StudioView" type="TextureRect" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_q0bxc")
+clip_contents = true
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = -7.0
+offset_bottom = -7.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("15_lqgot")
+expand_mode = 1
+stretch_mode = 6
+script = ExtResource("16_1fsba")
+
+[node name="OldView" type="TextureRect" parent="StudioView"]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Cloud1" type="TextureRect" parent="StudioView"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 30.0
+offset_right = 125.0
+offset_bottom = 70.0
+mouse_filter = 2
+texture = ExtResource("scene_cloud")
+expand_mode = 1
+
+[node name="Cloud2" type="TextureRect" parent="StudioView"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 55.0
+offset_right = 235.0
+offset_bottom = 95.0
+mouse_filter = 2
+texture = ExtResource("scene_cloud")
+expand_mode = 1
+
+[node name="Cloud3" type="TextureRect" parent="StudioView"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 80.0
+offset_right = 345.0
+offset_bottom = 120.0
+mouse_filter = 2
+texture = ExtResource("scene_cloud")
+expand_mode = 1
+
+[node name="CameraHeader" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = 32.0
+grow_horizontal = 2
+mouse_filter = 2
+color = Color(0.12549, 0.152941, 0.137255, 1)
+
+[node name="CameraFooter" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_right = -7.0
+offset_top = -86.0
+offset_bottom = -7.0
+grow_horizontal = 2
+mouse_filter = 2
+color = Color(0.353, 0.427, 0.318, 1)
+
+[node name="StageLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -78.0
+offset_right = 148.0
+offset_bottom = -54.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.937, 0.949, 0.831, 1)
+theme_override_font_sizes/font_size = 14
+text = "不明团状物"
+clip_text = true
+text_overrun_behavior = 3
+vertical_alignment = 1
+
+[node name="TreeArea" type="Control" parent="."]
+unique_name_in_owner = true
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = -8.0
+offset_bottom = -86.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="TreeView" type="Control" parent="TreeArea"]
+unique_name_in_owner = true
+clip_contents = true
+anchors_preset = 0
+offset_right = 334.0
+offset_bottom = 312.0
+mouse_default_cursor_shape = 2
+script = ExtResource("17_a5l61")
+
+[node name="EditorTreePreview" type="Control" parent="TreeArea"]
+clip_contents = true
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+mouse_filter = 2
+script = ExtResource("19_ey01a")
+
+[node name="SpeechBubble" type="Panel" parent="TreeArea"]
+unique_name_in_owner = true
+visible = false
+z_index = 3
+layout_mode = 0
+anchor_right = 1.0
+offset_left = 8.0
+offset_top = 14.0
+offset_right = -8.0
+offset_bottom = 80.0
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("journal_speech")
+script = ExtResource("speech_script")
+
+[node name="HintLabel" type="Label" parent="TreeArea/SpeechBubble"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 14.0
+offset_top = 10.0
+offset_right = -14.0
+offset_bottom = -10.0
+theme_override_font_sizes/font_size = 16
+text = "浇点水。"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="GrowthProgress" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -24.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_styles/background = ExtResource("journal_progress_track")
+theme_override_styles/fill = ExtResource("journal_progress_fill")
+max_value = 200.0
+show_percentage = false
+
+[node name="ProgressLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 160.0
+offset_top = -78.0
+offset_right = -16.0
+offset_bottom = -54.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.890, 0.918, 0.808, 1)
+theme_override_font_sizes/font_size = 14
+text = "0 / 200"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+
+[node name="NextStageLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -53.0
+offset_right = -16.0
+offset_bottom = -29.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.890, 0.918, 0.808, 1)
+theme_override_font_sizes/font_size = 14
+text = "下一阶段：发芽了"
+vertical_alignment = 1
+
+[node name="GrowthProps" parent="TreeArea" instance=ExtResource("growth_props")]

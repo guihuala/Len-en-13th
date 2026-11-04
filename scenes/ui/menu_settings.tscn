@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://bohl4m8xj8gun"]
+
+[ext_resource type="Script" path="res://scripts/button_feedback.gd" id="11_dvy1x"]
+[ext_resource type="Texture2D" path="res://assets/art/regions/ui__icons__sound_on.tres" id="25_x0c8g"]
+[ext_resource type="Texture2D" path="res://assets/art/regions/ui__icons__language.tres" id="26_i2rfi"]
+[ext_resource type="Theme" path="res://assets/ui/game_theme.tres" id="ui_theme"]
+
+[node name="Settings" type="HBoxContainer"]
+theme = ExtResource("ui_theme")
+theme_override_constants/separation = 8
+
+[node name="SoundButton" type="Button" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "声音：开"
+mouse_default_cursor_shape = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/icon_max_width = 24
+theme_override_font_sizes/font_size = 16
+icon = ExtResource("25_x0c8g")
+icon_alignment = 1
+expand_icon = true
+metadata/i18n_source = ""
+
+[node name="ClickRipple" type="Control" parent="SoundButton"]
+clip_contents = true
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("11_dvy1x")
+
+[node name="LanguageButton" type="Button" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "日本語"
+mouse_default_cursor_shape = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/icon_max_width = 24
+theme_override_font_sizes/font_size = 16
+text = "日本語"
+icon = ExtResource("26_i2rfi")
+expand_icon = true
+metadata/i18n_source = "日本語"
+
+[node name="ClickRipple" type="Control" parent="LanguageButton"]
+clip_contents = true
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("11_dvy1x")
+
+[node name="CreditsButton" type="Button" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 16
+text = "Credits"
+
+[node name="ClickRipple" type="Control" parent="CreditsButton"]
+clip_contents = true
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("11_dvy1x")

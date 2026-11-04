@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/burst_prop.gd" id="script"]
+[ext_resource type="Texture2D" path="res://assets/art/regions/story__growth_tonic.tres" id="bottle"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/label_tag.tres" id="paper"]
+[ext_resource type="Script" path="res://scripts/button_feedback.gd" id="feedback"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/focus_ring.tres" id="focus"]
+
+[sub_resource type="StyleBoxEmpty" id="empty"]
+
+[node name="GrowthTonic" type="Button"]
+custom_minimum_size = Vector2(88, 72)
+layout_mode = 1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -88.0
+offset_top = -140.0
+offset_bottom = -68.0
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("empty")
+theme_override_styles/hover = SubResource("empty")
+theme_override_styles/pressed = SubResource("empty")
+theme_override_styles/disabled = SubResource("empty")
+theme_override_styles/focus = ExtResource("focus")
+script = ExtResource("script")
+metadata/stable_feedback_bounds = true
+
+[node name="Artwork" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 4.0
+offset_right = 66.0
+offset_bottom = 44.0
+mouse_filter = 2
+texture = ExtResource("bottle")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Caption" type="Panel" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+offset_left = 2.0
+offset_top = 46.0
+offset_right = -2.0
+offset_bottom = 70.0
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("paper")
+
+[node name="Title" type="Label" parent="Caption"]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_right = -4.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 12
+theme_override_colors/font_color = Color(0.22, 0.184, 0.137, 1)
+text = "加速 ×3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Status" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchor_right = 1.0
+offset_top = 74.0
+offset_bottom = 88.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.89, 0.918, 0.808, 1)
+theme_override_font_sizes/font_size = 11
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClickRipple" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("feedback")

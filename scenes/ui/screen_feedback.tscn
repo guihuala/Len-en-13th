@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/screen_feedback.gd" id="script"]
+
+[node name="ScreenFeedback" type="CanvasLayer"]
+layer = 2
+script = ExtResource("script")
+
+[node name="Glow" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0.86, 0.93, 0.66, 1)

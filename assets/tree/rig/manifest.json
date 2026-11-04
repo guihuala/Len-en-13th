@@ -1,0 +1,6205 @@
+{
+  "version": 3,
+  "canvas": [
+    480,
+    480
+  ],
+  "forms": {
+    "stage_01_potted": [
+      {
+        "asset": "plant_fc3d0406a8",
+        "kind": "base",
+        "name": "000_便便与地面",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          72,
+          2636,
+          960,
+          780
+        ],
+        "rect": [
+          123.0,
+          262.0,
+          240.0,
+          195.0
+        ]
+      }
+    ],
+    "stage_02_growth": [
+      {
+        "asset": "plant_e0f7662007",
+        "kind": "base",
+        "name": "000_萌芽长茎",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1664,
+          2596,
+          80,
+          468
+        ],
+        "rect": [
+          232.0,
+          180.0,
+          20.0,
+          117.0
+        ]
+      },
+      {
+        "asset": "plant_7b2e0374b1",
+        "kind": "leaf",
+        "name": "001_萌芽左叶",
+        "pivot": [
+          244,
+          238
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          804,
+          3940,
+          280,
+          204
+        ],
+        "rect": [
+          177.0,
+          190.0,
+          70.0,
+          51.0
+        ]
+      },
+      {
+        "asset": "plant_6295cc2f47",
+        "kind": "leaf",
+        "name": "002_萌芽右叶",
+        "pivot": [
+          244,
+          216
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          488,
+          3936,
+          280,
+          220
+        ],
+        "rect": [
+          240.0,
+          165.0,
+          70.0,
+          55.0
+        ]
+      },
+      {
+        "asset": "plant_642973bb59",
+        "kind": "leaf",
+        "name": "003_萌芽顶叶",
+        "pivot": [
+          242,
+          200
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1132,
+          3936,
+          108,
+          204
+        ],
+        "rect": [
+          228.0,
+          153.0,
+          27.0,
+          51.0
+        ]
+      },
+      {
+        "asset": "plant_fc3d0406a8",
+        "kind": "base",
+        "name": "004_便便与地面",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          72,
+          2636,
+          960,
+          780
+        ],
+        "rect": [
+          123.0,
+          262.0,
+          240.0,
+          195.0
+        ]
+      }
+    ],
+    "stage_02a_leaf_bud": [
+      {
+        "asset": "plant_84cc4bff54",
+        "kind": "base",
+        "name": "000_叶苞短茎",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          28,
+          3936,
+          52,
+          236
+        ],
+        "rect": [
+          232.0,
+          238.0,
+          13.0,
+          59.0
+        ]
+      },
+      {
+        "asset": "plant_db9b6cf55b",
+        "kind": "bud",
+        "name": "001_闭合叶苞",
+        "pivot": [
+          240,
+          273
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          -15
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1096,
+          2616,
+          528,
+          468
+        ],
+        "rect": [
+          174.0,
+          162.0,
+          132.0,
+          117.0
+        ]
+      },
+      {
+        "asset": "plant_fc3d0406a8",
+        "kind": "base",
+        "name": "002_便便与地面",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          72,
+          2636,
+          960,
+          780
+        ],
+        "rect": [
+          123.0,
+          262.0,
+          240.0,
+          195.0
+        ]
+      }
+    ],
+    "stage_02b_hatching": [
+      {
+        "asset": "plant_84cc4bff54",
+        "kind": "base",
+        "name": "000_叶苞短茎",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          28,
+          3936,
+          52,
+          236
+        ],
+        "rect": [
+          232.0,
+          238.0,
+          13.0,
+          59.0
+        ]
+      },
+      {
+        "asset": "plant_fc3d0406a8",
+        "kind": "base",
+        "name": "001_便便与地面",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          72,
+          2636,
+          960,
+          780
+        ],
+        "rect": [
+          123.0,
+          262.0,
+          240.0,
+          195.0
+        ]
+      },
+      {
+        "asset": "plant_a16308e643",
+        "kind": "base",
+        "name": "002_破壳叶座（后半）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          340,
+          3496,
+          592,
+          336
+        ],
+        "rect": [
+          167.0,
+          213.0,
+          148.0,
+          84.0
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "003_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.72,
+          0,
+          0,
+          0.72,
+          240,
+          202.32000000000002
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_43e88edbe8",
+        "kind": "hat",
+        "name": "004_破壳简化帽",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.718246116187073,
+          -0.05022466109577,
+          0.0502246610957702,
+          0.718246116187073,
+          241.908537121639,
+          202.25335241510902
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          532,
+          472,
+          260
+        ],
+        "rect": [
+          -59,
+          -78,
+          118,
+          65
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "005_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.72,
+          0,
+          0,
+          0.72,
+          240,
+          199.44000000000003
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "006_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.72,
+          0,
+          0,
+          0.72,
+          240,
+          199.44000000000003
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "plant_b5881a60cd",
+        "kind": "base",
+        "name": "007_破壳叶座（前半）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          3
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          140,
+          3956,
+          316,
+          204
+        ],
+        "rect": [
+          203.0,
+          239.0,
+          79.0,
+          51.0
+        ]
+      }
+    ],
+    "stage_03_branching": [
+      {
+        "asset": "plant_4bc602eb56",
+        "kind": "base",
+        "name": "000_自然地面",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "texture": "res://assets/art/atlases/tree_plant_4bc602eb56.png",
+        "texture_region": [
+          0,
+          0,
+          988,
+          252
+        ],
+        "rect": [
+          124.0,
+          397.0,
+          247.0,
+          63.0
+        ]
+      },
+      {
+        "asset": "plant_e97fb4547d",
+        "kind": "base",
+        "name": "001_分枝期树干",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "texture": "res://assets/art/atlases/tree_plant_e97fb4547d.png",
+        "texture_region": [
+          0,
+          0,
+          1008,
+          1084
+        ],
+        "rect": [
+          120.0,
+          158.0,
+          252.0,
+          271.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "002_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          0.84591029,
+          0.24256087,
+          -0.22050988,
+          0.76900936,
+          119.1635883,
+          260.29756508
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "003_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          -0.86284228,
+          0.4208363,
+          0.35946434,
+          0.73701112,
+          386.51369138,
+          257.16654796
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "004_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          0.67104017,
+          0.35679839,
+          -0.32863009,
+          0.61806332,
+          129.15839318,
+          175.72806449
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "005_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          -0.58112638,
+          0.50516545,
+          0.4723625,
+          0.5433909,
+          364.24505507,
+          170.79338191
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "006_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          0.28866597,
+          0.33207222,
+          -0.41509027,
+          0.36083247,
+          205.45336109,
+          270.71711139
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "007_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          -0.45104738,
+          0.19145825,
+          0.19536556,
+          0.46025243,
+          295.04189513,
+          302.34166988
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_7f13ca52e8",
+        "kind": "base",
+        "name": "008_未成形小叶苞",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.46,
+          0,
+          0,
+          0.46,
+          154,
+          255
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          24,
+          3500,
+          264,
+          400
+        ],
+        "rect": [
+          -34.0,
+          -62.0,
+          66.0,
+          100.0
+        ]
+      },
+      {
+        "asset": "plant_7f13ca52e8",
+        "kind": "base",
+        "name": "009_未成形小叶苞",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.46,
+          0,
+          0,
+          0.46,
+          359,
+          249
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          24,
+          3500,
+          264,
+          400
+        ],
+        "rect": [
+          -34.0,
+          -62.0,
+          66.0,
+          100.0
+        ]
+      },
+      {
+        "asset": "plant_7f13ca52e8",
+        "kind": "base",
+        "name": "010_未成形小叶苞",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.4,
+          0,
+          0,
+          0.4,
+          145,
+          159
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          24,
+          3500,
+          264,
+          400
+        ],
+        "rect": [
+          -34.0,
+          -62.0,
+          66.0,
+          100.0
+        ]
+      },
+      {
+        "asset": "plant_7f13ca52e8",
+        "kind": "base",
+        "name": "011_未成形小叶苞",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.4,
+          0,
+          0,
+          0.4,
+          350,
+          165
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          24,
+          3500,
+          264,
+          400
+        ],
+        "rect": [
+          -34.0,
+          -62.0,
+          66.0,
+          100.0
+        ]
+      },
+      {
+        "asset": "character_7a4e4bcbd0",
+        "kind": "base",
+        "name": "012_身体与衣服",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1.12,
+          0,
+          0,
+          1.12,
+          240,
+          148
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          1120,
+          16,
+          492,
+          340
+        ],
+        "rect": [
+          -62,
+          22,
+          123,
+          85
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "013_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1.12,
+          0,
+          0,
+          1.12,
+          240,
+          126.72
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "014_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          1.117271736291,
+          -0.07812725059342,
+          0.0781272505934203,
+          1.117271736291,
+          242.96883552255,
+          126.61632597905805
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "015_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          1.12,
+          0,
+          0,
+          1.12,
+          240,
+          122.24
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "016_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1.12,
+          0,
+          0,
+          1.12,
+          240,
+          122.24
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "planet_f287e88a03",
+        "kind": "base",
+        "name": "017_惊叹气泡",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          60,
+          4752,
+          224,
+          224
+        ],
+        "rect": [
+          47,
+          282,
+          62,
+          62
+        ]
+      },
+      {
+        "asset": "planet_f287e88a03",
+        "kind": "base",
+        "name": "018_惊叹气泡",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          324,
+          0
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          60,
+          4752,
+          224,
+          224
+        ],
+        "rect": [
+          47,
+          282,
+          62,
+          62
+        ]
+      }
+    ],
+    "stage_04_incident": [
+      {
+        "asset": "plant_4bc602eb56",
+        "kind": "base",
+        "name": "000_自然地面",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "texture": "res://assets/art/atlases/tree_plant_4bc602eb56.png",
+        "texture_region": [
+          0,
+          0,
+          988,
+          252
+        ],
+        "rect": [
+          124.0,
+          397.0,
+          247.0,
+          63.0
+        ]
+      },
+      {
+        "asset": "plant_painted_canopy",
+        "kind": "canopy",
+        "name": "大树阶段_小叶团_01",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          -0.93954264,
+          0.34243194,
+          0.34243194,
+          0.93954264,
+          170.59,
+          286.32
+        ],
+        "rect": [
+          -29.28,
+          -31.15,
+          58.56,
+          62.3
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1640,
+          3736,
+          376,
+          400
+        ]
+      },
+      {
+        "asset": "plant_painted_canopy",
+        "kind": "canopy",
+        "name": "大树阶段_小叶团_02",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          -0.92616434,
+          -0.37712015,
+          -0.37712015,
+          0.92616434,
+          106.1,
+          269.25
+        ],
+        "rect": [
+          -16.65,
+          -17.71,
+          33.3,
+          35.42
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1640,
+          3736,
+          376,
+          400
+        ]
+      },
+      {
+        "asset": "plant_painted_canopy",
+        "kind": "canopy",
+        "name": "大树阶段_小叶团_03",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.99948543,
+          0.03207611,
+          -0.03207611,
+          0.99948543,
+          188.54,
+          311.73
+        ],
+        "rect": [
+          -22.58,
+          -24.03,
+          45.17,
+          48.05
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1640,
+          3736,
+          376,
+          400
+        ]
+      },
+      {
+        "asset": "plant_painted_canopy",
+        "kind": "canopy",
+        "name": "大树阶段_小叶团_04",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          -0.79414311,
+          -0.6077308,
+          -0.6077308,
+          0.79414311,
+          96.14,
+          192.24
+        ],
+        "rect": [
+          -20.51,
+          -21.82,
+          41.02,
+          43.64
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1640,
+          3736,
+          376,
+          400
+        ]
+      },
+      {
+        "asset": "plant_painted_canopy",
+        "kind": "canopy",
+        "name": "大树阶段_小叶团_05",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          -0.80667013,
+          0.59100195,
+          0.59100195,
+          0.80667013,
+          120.98,
+          204.59
+        ],
+        "rect": [
+          -29.15,
+          -31.02,
+          58.31,
+          62.03
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1640,
+          3736,
+          376,
+          400
+        ]
+      },
+      {
+        "asset": "plant_painted_canopy",
+        "kind": "canopy",
+        "name": "大树阶段_小叶团_06",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          -0.72231264,
+          0.69156666,
+          0.69156666,
+          0.72231264,
+          179.21,
+          241.83
+        ],
+        "rect": [
+          -28.44,
+          -30.26,
+          56.89,
+          60.52
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1640,
+          3736,
+          376,
+          400
+        ]
+      },
+      {
+        "asset": "plant_painted_canopy",
+        "kind": "canopy",
+        "name": "大树阶段_小叶团_07",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          -0.9866646,
+          0.16276659,
+          0.16276659,
+          0.9866646,
+          160.32,
+          109.71
+        ],
+        "rect": [
+          -15.97,
+          -16.99,
+          31.95,
+          33.99
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1640,
+          3736,
+          376,
+          400
+        ]
+      },
+      {
+        "asset": "plant_painted_canopy",
+        "kind": "canopy",
+        "name": "大树阶段_小叶团_08",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.95382013,
+          -0.30037837,
+          0.30037837,
+          0.95382013,
+          186.19,
+          165.79
+        ],
+        "rect": [
+          -20.96,
+          -22.3,
+          41.92,
+          44.59
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1640,
+          3736,
+          376,
+          400
+        ]
+      },
+      {
+        "asset": "plant_painted_canopy",
+        "kind": "canopy",
+        "name": "大树阶段_小叶团_09",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.90744581,
+          -0.42016914,
+          0.42016914,
+          0.90744581,
+          385.94,
+          254.62
+        ],
+        "rect": [
+          -30.59,
+          -32.54,
+          61.18,
+          65.08
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1640,
+          3736,
+          376,
+          400
+        ]
+      },
+      {
+        "asset": "plant_painted_canopy",
+        "kind": "canopy",
+        "name": "大树阶段_小叶团_10",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          -0.97210081,
+          -0.23456344,
+          -0.23456344,
+          0.97210081,
+          307.84,
+          308.66
+        ],
+        "rect": [
+          -17.18,
+          -18.28,
+          34.36,
+          36.55
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1640,
+          3736,
+          376,
+          400
+        ]
+      },
+      {
+        "asset": "plant_painted_canopy",
+        "kind": "canopy",
+        "name": "大树阶段_小叶团_11",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.84808848,
+          0.52985463,
+          -0.52985463,
+          0.84808848,
+          338.69,
+          299.9
+        ],
+        "rect": [
+          -20.94,
+          -22.28,
+          41.88,
+          44.55
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1640,
+          3736,
+          376,
+          400
+        ]
+      },
+      {
+        "asset": "plant_painted_canopy",
+        "kind": "canopy",
+        "name": "大树阶段_小叶团_12",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          -0.58652619,
+          -0.80993026,
+          -0.80993026,
+          0.58652619,
+          381.48,
+          178.18
+        ],
+        "rect": [
+          -24.57,
+          -26.14,
+          49.14,
+          52.28
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1640,
+          3736,
+          376,
+          400
+        ]
+      },
+      {
+        "asset": "plant_painted_canopy",
+        "kind": "canopy",
+        "name": "大树阶段_小叶团_13",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          -0.5889189,
+          0.80819213,
+          0.80819213,
+          0.5889189,
+          353.59,
+          191.74
+        ],
+        "rect": [
+          -25.89,
+          -27.54,
+          51.77,
+          55.08
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1640,
+          3736,
+          376,
+          400
+        ]
+      },
+      {
+        "asset": "plant_painted_canopy",
+        "kind": "canopy",
+        "name": "大树阶段_小叶团_14",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.62745554,
+          0.77865239,
+          -0.77865239,
+          0.62745554,
+          324.54,
+          120.45
+        ],
+        "rect": [
+          -28.83,
+          -30.67,
+          57.67,
+          61.35
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1640,
+          3736,
+          376,
+          400
+        ]
+      },
+      {
+        "asset": "plant_7a87ca1fa3",
+        "kind": "base",
+        "name": "001_繁茂期树干",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          24,
+          64,
+          1308,
+          1404
+        ],
+        "rect": [
+          82.0,
+          89.0,
+          327.0,
+          351.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "002_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          0.93358043,
+          0.35836795,
+          -0.29386172,
+          0.76553595,
+          80.65678294,
+          254.66528202
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "003_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          -0.9266082,
+          0.31905679,
+          0.28649998,
+          0.83205635,
+          416.06432816,
+          243.23772835
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "004_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          0.7534421,
+          0.435,
+          -0.39,
+          0.67549981,
+          81.86231595,
+          187.6
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "005_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          -0.67626179,
+          0.60890885,
+          0.53530449,
+          0.59451586,
+          399.05047165,
+          153.64364593
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "006_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          0.6343038,
+          0.38112818,
+          -0.36052665,
+          0.60001711,
+          140.6278479,
+          134.75487298
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "007_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          -0.69429455,
+          0.30911985,
+          0.27658092,
+          0.62121091,
+          351.77178191,
+          131.63520605
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "008_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          0.40754317,
+          0.35427188,
+          -0.36083247,
+          0.41509027,
+          194.69827307,
+          300.82912497
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "009_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          -0.4632086,
+          0.34905271,
+          0.33099826,
+          0.43924953,
+          296.52834383,
+          296.03789146
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "010_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.49,
+          0,
+          0,
+          0.49,
+          93,
+          223.19
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "011_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.488806384627314,
+          -0.03418067213462,
+          0.0341806721346214,
+          0.488806384627314,
+          94.29886554,
+          223.14464262
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "012_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.49,
+          0,
+          0,
+          0.49,
+          93,
+          221.23
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "013_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.49,
+          0,
+          0,
+          0.49,
+          93,
+          221.23
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "014_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.49,
+          0,
+          0,
+          0.49,
+          390,
+          241.19
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "015_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.488806384627314,
+          -0.03418067213462,
+          0.0341806721346214,
+          0.488806384627314,
+          391.298865541116,
+          241.14464262
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "016_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.49,
+          0,
+          0,
+          0.49,
+          390,
+          239.23
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "017_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.49,
+          0,
+          0,
+          0.49,
+          390,
+          239.23
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "018_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.43,
+          0,
+          0,
+          0.43,
+          103,
+          148.33
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "019_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.428952541611724,
+          -0.02999528370997,
+          0.0299952837099739,
+          0.428952541611724,
+          104.13982078,
+          148.29019658
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "020_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.43,
+          0,
+          0,
+          0.43,
+          103,
+          146.61
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "021_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.43,
+          0,
+          0,
+          0.43,
+          103,
+          146.61
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "022_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.43,
+          0,
+          0,
+          0.43,
+          375,
+          139.33
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "023_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.428952541611724,
+          -0.02999528370997,
+          0.0299952837099739,
+          0.428952541611724,
+          376.13982078,
+          139.29019658
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "024_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.43,
+          0,
+          0,
+          0.43,
+          375,
+          137.61
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "025_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.43,
+          0,
+          0,
+          0.43,
+          375,
+          137.61
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "026_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.36,
+          0,
+          0,
+          0.36,
+          162,
+          99.16
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "027_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.359123058093537,
+          -0.02511233054789,
+          0.0251123305478851,
+          0.359123058093537,
+          162.95426856,
+          99.12667621
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "028_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.36,
+          0,
+          0,
+          0.36,
+          162,
+          97.72
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "029_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.36,
+          0,
+          0,
+          0.36,
+          162,
+          97.72
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "030_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.36,
+          0,
+          0,
+          0.36,
+          336,
+          82.16
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "031_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.359123058093537,
+          -0.02511233054789,
+          0.0251123305478851,
+          0.359123058093537,
+          336.95426856,
+          82.12667621
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "032_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.36,
+          0,
+          0,
+          0.36,
+          336,
+          80.72
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "033_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.36,
+          0,
+          0,
+          0.36,
+          336,
+          80.72
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_7a4e4bcbd0",
+        "kind": "base",
+        "name": "034_身体与衣服",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1.18,
+          0,
+          0,
+          1.18,
+          240,
+          123
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          1120,
+          16,
+          492,
+          340
+        ],
+        "rect": [
+          -62,
+          22,
+          123,
+          85
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "035_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1.18,
+          0,
+          0,
+          1.18,
+          240,
+          100.58000000000001
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "036_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          1.17712557930659,
+          -0.08231263901807,
+          0.0823126390180678,
+          1.17712557930659,
+          243.127880282687,
+          100.47077201365106
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "037_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          1.18,
+          0,
+          0,
+          1.18,
+          240,
+          95.86
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "038_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1.18,
+          0,
+          0,
+          1.18,
+          240,
+          95.86
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      }
+    ],
+    "stage_05_flowering": [
+      {
+        "asset": "planet_209ea27b31",
+        "kind": "base",
+        "name": "000_星球：海洋与陆地",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.85,
+          0,
+          0,
+          0.85,
+          240,
+          310
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          64,
+          64,
+          1464,
+          1464
+        ],
+        "rect": [
+          -194,
+          -194,
+          388,
+          388
+        ]
+      },
+      {
+        "asset": "plant_7a87ca1fa3",
+        "kind": "base",
+        "name": "001_繁茂期树干",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.55,
+          0,
+          0,
+          0.55,
+          108,
+          0
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          24,
+          64,
+          1308,
+          1404
+        ],
+        "rect": [
+          82.0,
+          89.0,
+          327.0,
+          351.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "002_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          0.51346924,
+          0.19710237,
+          -0.16162395,
+          0.42104477,
+          152.36123062,
+          140.06590511
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "003_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          -0.50963451,
+          0.17548123,
+          0.15757499,
+          0.45763099,
+          336.83538049,
+          133.78075059
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "004_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          0.41439316,
+          0.23925,
+          -0.2145,
+          0.3715249,
+          153.02427377,
+          103.18
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "005_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          -0.37194398,
+          0.33489987,
+          0.29441747,
+          0.32698372,
+          327.47775941,
+          84.50400526
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "006_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          0.34886709,
+          0.2096205,
+          -0.19828966,
+          0.33000941,
+          185.34531635,
+          74.11518014
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "007_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          -0.381862,
+          0.17001592,
+          0.15211951,
+          0.341666,
+          301.47448005,
+          72.39936333
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "008_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          0.22414874,
+          0.19484953,
+          -0.19845786,
+          0.22829965,
+          215.08405019,
+          165.45601873
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "plant_5a1a8bc4c0",
+        "kind": "leaf",
+        "name": "009_叶片",
+        "pivot": [
+          40,
+          0
+        ],
+        "transform": [
+          -0.25476473,
+          0.19197899,
+          0.18204904,
+          0.24158724,
+          271.09058911,
+          162.8208403
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_2.png",
+        "texture_region": [
+          1276,
+          3932,
+          344,
+          160
+        ],
+        "rect": [
+          -44.0,
+          -20.0,
+          86.0,
+          40.0
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "010_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.2695,
+          0,
+          0,
+          0.2695,
+          159.15,
+          122.7545
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "011_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.268843511545023,
+          -0.01879936967404,
+          0.0187993696740418,
+          0.268843511545023,
+          159.86437605,
+          122.72955344
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "012_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.2695,
+          0,
+          0,
+          0.2695,
+          159.15,
+          121.6765
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "013_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.2695,
+          0,
+          0,
+          0.2695,
+          159.15,
+          121.6765
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "014_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.2695,
+          0,
+          0,
+          0.2695,
+          322.5,
+          132.6545
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "015_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.268843511545023,
+          -0.01879936967404,
+          0.0187993696740418,
+          0.268843511545023,
+          323.214376047614,
+          132.62955344
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "016_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.2695,
+          0,
+          0,
+          0.2695,
+          322.5,
+          131.5765
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "017_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.2695,
+          0,
+          0,
+          0.2695,
+          322.5,
+          131.5765
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "018_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.2365,
+          0,
+          0,
+          0.2365,
+          164.65,
+          81.5815
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "019_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.235923897886448,
+          -0.01649740604049,
+          0.0164974060404856,
+          0.235923897886448,
+          165.27690143,
+          81.55960812
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "020_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.2365,
+          0,
+          0,
+          0.2365,
+          164.65,
+          80.6355
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "021_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.2365,
+          0,
+          0,
+          0.2365,
+          164.65,
+          80.6355
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "022_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.2365,
+          0,
+          0,
+          0.2365,
+          314.25,
+          76.6315
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "023_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.235923897886448,
+          -0.01649740604049,
+          0.0164974060404856,
+          0.235923897886448,
+          314.87690143,
+          76.60960812
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "024_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.2365,
+          0,
+          0,
+          0.2365,
+          314.25,
+          75.6855
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "025_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.2365,
+          0,
+          0,
+          0.2365,
+          314.25,
+          75.6855
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "026_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.198,
+          0,
+          0,
+          0.198,
+          197.1,
+          54.538
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "027_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.197517681951445,
+          -0.01381178180134,
+          0.0138117818013368,
+          0.197517681951445,
+          197.62484771,
+          54.51967191
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "028_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.198,
+          0,
+          0,
+          0.198,
+          197.1,
+          53.746
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "029_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.198,
+          0,
+          0,
+          0.198,
+          197.1,
+          53.746
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "030_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.198,
+          0,
+          0,
+          0.198,
+          292.8,
+          45.188
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "031_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.197517681951445,
+          -0.01381178180134,
+          0.0138117818013368,
+          0.197517681951445,
+          293.32484771,
+          45.16967191
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "032_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.198,
+          0,
+          0,
+          0.198,
+          292.8,
+          44.396
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "033_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.198,
+          0,
+          0,
+          0.198,
+          292.8,
+          44.396
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_7a4e4bcbd0",
+        "kind": "base",
+        "name": "034_身体与衣服",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.649,
+          0,
+          0,
+          0.649,
+          240,
+          67.65
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          1120,
+          16,
+          492,
+          340
+        ],
+        "rect": [
+          -62,
+          22,
+          123,
+          85
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "035_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.649,
+          0,
+          0,
+          0.649,
+          240,
+          55.319
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "036_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.647419068618626,
+          -0.04527195145994,
+          0.0452719514599373,
+          0.647419068618626,
+          241.720334155478,
+          55.258924607507794
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c05",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "037_惊讶睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.649,
+          0,
+          0,
+          0.649,
+          240,
+          52.723
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          352,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_8f7b5da119",
+        "kind": "base",
+        "name": "038_惊讶表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.649,
+          0,
+          0,
+          0.649,
+          240,
+          52.723
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          764,
+          532,
+          212,
+          188
+        ],
+        "rect": [
+          -27,
+          0,
+          53,
+          47
+        ]
+      }
+    ],
+    "stage_06_nursery": [
+      {
+        "asset": "planet_209ea27b31",
+        "kind": "base",
+        "name": "000_星球：海洋与陆地",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          240,
+          259
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          64,
+          64,
+          1464,
+          1464
+        ],
+        "rect": [
+          -194,
+          -194,
+          388,
+          388
+        ]
+      },
+      {
+        "asset": "planet_8dca9b2c97",
+        "kind": "base",
+        "name": "001_星球：蔓延根系",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          240,
+          259
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          156,
+          2928,
+          1328,
+          1208
+        ],
+        "rect": [
+          -155,
+          -120,
+          318,
+          271
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "002_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          115,
+          189
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "003_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          140,
+          144
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "004_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          205,
+          117
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "005_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          322,
+          133
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "006_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          370,
+          191
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "007_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          95,
+          249
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "008_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          385,
+          267
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "009_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          106,
+          315
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_c34bda57f7",
+        "kind": "base",
+        "name": "031_星球轨道与小飞船",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          40,
+          4168,
+          1712,
+          480
+        ],
+        "rect": [
+          29,
+          155,
+          422,
+          210
+        ]
+      },
+      {
+        "asset": "character_7a4e4bcbd0",
+        "kind": "base",
+        "name": "010_身体与衣服",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.8,
+          0,
+          0,
+          0.8,
+          240,
+          132
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          1120,
+          16,
+          492,
+          340
+        ],
+        "rect": [
+          -62,
+          22,
+          123,
+          85
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "011_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.8,
+          0,
+          0,
+          0.8,
+          240,
+          116.8
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "012_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.798051240207859,
+          -0.0558051789953,
+          0.0558051789953002,
+          0.798051240207859,
+          242.120596801821,
+          116.72594712789902
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "013_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.8,
+          0,
+          0,
+          0.8,
+          240,
+          113.6
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "014_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.8,
+          0,
+          0,
+          0.8,
+          240,
+          113.6
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "015_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.23,
+          0,
+          0,
+          0.23,
+          117,
+          244.13
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "016_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.22943973155976,
+          -0.01604398896115,
+          0.0160439889611488,
+          0.22943973155976,
+          117.609671580524,
+          244.1087098
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "017_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.23,
+          0,
+          0,
+          0.23,
+          117,
+          243.21
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "018_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.23,
+          0,
+          0,
+          0.23,
+          117,
+          243.21
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "019_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.23,
+          0,
+          0,
+          0.23,
+          357,
+          244.13
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "020_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.22943973155976,
+          -0.01604398896115,
+          0.0160439889611488,
+          0.22943973155976,
+          357.609671580524,
+          244.1087098
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "021_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.23,
+          0,
+          0,
+          0.23,
+          357,
+          243.21
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "022_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.23,
+          0,
+          0,
+          0.23,
+          357,
+          243.21
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "023_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.23,
+          0,
+          0,
+          0.23,
+          154,
+          354.13
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "024_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.22943973155976,
+          -0.01604398896115,
+          0.0160439889611488,
+          0.22943973155976,
+          154.609671580524,
+          354.1087098
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "025_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.23,
+          0,
+          0,
+          0.23,
+          154,
+          353.21
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "026_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.23,
+          0,
+          0,
+          0.23,
+          154,
+          353.21
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "027_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.23,
+          0,
+          0,
+          0.23,
+          326,
+          354.13
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "028_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.22943973155976,
+          -0.01604398896115,
+          0.0160439889611488,
+          0.22943973155976,
+          326.609671580524,
+          354.1087098
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "029_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.23,
+          0,
+          0,
+          0.23,
+          326,
+          353.21
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "030_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.23,
+          0,
+          0,
+          0.23,
+          326,
+          353.21
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      }
+    ],
+    "stage_07_forest": [
+      {
+        "asset": "planet_209ea27b31",
+        "kind": "base",
+        "name": "000_星球：海洋与陆地",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1.05555555555556,
+          0,
+          0,
+          1.05555555555556,
+          240,
+          257
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          64,
+          64,
+          1464,
+          1464
+        ],
+        "rect": [
+          -194,
+          -194,
+          388,
+          388
+        ]
+      },
+      {
+        "asset": "planet_8dca9b2c97",
+        "kind": "base",
+        "name": "001_星球：蔓延根系",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1.05555555555556,
+          0,
+          0,
+          1.05555555555556,
+          240,
+          257
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          156,
+          2928,
+          1328,
+          1208
+        ],
+        "rect": [
+          -155,
+          -120,
+          318,
+          271
+        ]
+      },
+      {
+        "asset": "planet_71c6123452",
+        "kind": "base",
+        "name": "002_星球：环绕树根与叶片",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1.05555555555556,
+          0,
+          0,
+          1.05555555555556,
+          240,
+          257
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          64,
+          1568,
+          1504,
+          1336
+        ],
+        "rect": [
+          -195,
+          -143,
+          374,
+          313
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "003_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1.05555555555556,
+          0,
+          0,
+          1.05555555555556,
+          108.055555555556,
+          183.111111111111
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "004_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1.05555555555556,
+          0,
+          0,
+          1.05555555555556,
+          134.444444444444,
+          135.611111111111
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "005_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1.05555555555556,
+          0,
+          0,
+          1.05555555555556,
+          203.055555555556,
+          107.111111111111
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "006_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1.05555555555556,
+          0,
+          0,
+          1.05555555555556,
+          326.555555555556,
+          124
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "007_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1.05555555555556,
+          0,
+          0,
+          1.05555555555556,
+          377.222222222222,
+          185.222222222222
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "008_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1.05555555555556,
+          0,
+          0,
+          1.05555555555556,
+          86.9444444444444,
+          246.444444444444
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "009_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1.05555555555556,
+          0,
+          0,
+          1.05555555555556,
+          393.055555555556,
+          265.444444444444
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "010_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1.05555555555556,
+          0,
+          0,
+          1.05555555555556,
+          98.5555555555555,
+          316.111111111111
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "011_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1.05555555555556,
+          0,
+          0,
+          1.05555555555556,
+          377.222222222222,
+          336.166666666667
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "012_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1.05555555555556,
+          0,
+          0,
+          1.05555555555556,
+          139.722222222222,
+          377.333333333333
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "013_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1.05555555555556,
+          0,
+          0,
+          1.05555555555556,
+          203.055555555556,
+          404.777777777778
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "014_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1.05555555555556,
+          0,
+          0,
+          1.05555555555556,
+          273.777777777778,
+          407.944444444444
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "015_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1.05555555555556,
+          0,
+          0,
+          1.05555555555556,
+          339.222222222222,
+          378.388888888889
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "016_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1.05555555555556,
+          0,
+          0,
+          1.05555555555556,
+          155.555555555556,
+          299.222222222222
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "017_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1.05555555555556,
+          0,
+          0,
+          1.05555555555556,
+          319.166666666667,
+          299.222222222222
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "planet_bdeb53f359",
+        "kind": "canopy",
+        "name": "018_地表小树",
+        "pivot": [
+          0,
+          12
+        ],
+        "transform": [
+          1.05555555555556,
+          0,
+          0,
+          1.05555555555556,
+          236.833333333333,
+          365.722222222222
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_3.png",
+        "texture_region": [
+          356,
+          4772,
+          164,
+          192
+        ],
+        "rect": [
+          -19,
+          -26,
+          42,
+          48
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "019_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1.68,
+          0,
+          0,
+          1.68,
+          240,
+          173.07999999999998
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "020_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          1.6759076044365,
+          -0.11719087589013,
+          0.11719087589013,
+          1.6759076044365,
+          244.453253283825,
+          172.9244889685871
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "021_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          1.68,
+          0,
+          0,
+          1.68,
+          240,
+          166.35999999999999
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "022_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          1.68,
+          0,
+          0,
+          1.68,
+          240,
+          166.35999999999999
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "023_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.2,
+          0,
+          0,
+          0.2,
+          99,
+          274.2
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "024_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.199512810051965,
+          -0.01395129474883,
+          0.0139512947488251,
+          0.199512810051965,
+          99.5301492004554,
+          274.18148678
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "025_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.2,
+          0,
+          0,
+          0.2,
+          99,
+          273.4
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "026_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.2,
+          0,
+          0,
+          0.2,
+          99,
+          273.4
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "027_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.2,
+          0,
+          0,
+          0.2,
+          380,
+          280.2
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "028_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.199512810051965,
+          -0.01395129474883,
+          0.0139512947488251,
+          0.199512810051965,
+          380.530149200455,
+          280.18148678
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "029_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.2,
+          0,
+          0,
+          0.2,
+          380,
+          279.4
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "030_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.2,
+          0,
+          0,
+          0.2,
+          380,
+          279.4
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "031_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.2,
+          0,
+          0,
+          0.2,
+          140,
+          380.2
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "032_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.199512810051965,
+          -0.01395129474883,
+          0.0139512947488251,
+          0.199512810051965,
+          140.530149200455,
+          380.18148678
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "033_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.2,
+          0,
+          0,
+          0.2,
+          140,
+          379.4
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "034_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.2,
+          0,
+          0,
+          0.2,
+          140,
+          379.4
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      },
+      {
+        "asset": "character_72a82db031",
+        "kind": "base",
+        "name": "035_头发与空白脸",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.2,
+          0,
+          0,
+          0.2,
+          340,
+          382.2
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          16,
+          16,
+          460,
+          500
+        ],
+        "rect": [
+          -55,
+          -50,
+          115,
+          125
+        ]
+      },
+      {
+        "asset": "character_19b16cc37c",
+        "kind": "hat",
+        "name": "036_成熟帽子",
+        "pivot": [
+          0,
+          -38
+        ],
+        "transform": [
+          0.199512810051965,
+          -0.01395129474883,
+          0.0139512947488251,
+          0.199512810051965,
+          340.530149200455,
+          382.18148678
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          492,
+          16,
+          612,
+          452
+        ],
+        "rect": [
+          -78,
+          -80,
+          153,
+          113
+        ]
+      },
+      {
+        "asset": "character_painted_eyes_c06",
+        "closed_asset": "character_e69075b53e",
+        "kind": "eyes",
+        "name": "037_微笑睁眼",
+        "pivot": [
+          0,
+          25
+        ],
+        "transform": [
+          0.2,
+          0,
+          0,
+          0.2,
+          340,
+          381.4
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          688,
+          808,
+          320,
+          120
+        ],
+        "closed_texture": "res://assets/art/atlases/tree_shared_1.png",
+        "closed_texture_region": [
+          16,
+          808,
+          320,
+          120
+        ],
+        "rect": [
+          -40,
+          10,
+          80,
+          30
+        ]
+      },
+      {
+        "asset": "character_683270793c",
+        "kind": "base",
+        "name": "038_微笑表情（眉、嘴、腮红）",
+        "pivot": [
+          0,
+          0
+        ],
+        "transform": [
+          0.2,
+          0,
+          0,
+          0.2,
+          340,
+          381.4
+        ],
+        "texture": "res://assets/art/atlases/tree_shared_1.png",
+        "texture_region": [
+          504,
+          532,
+          244,
+          188
+        ],
+        "rect": [
+          -31,
+          -1,
+          61,
+          47
+        ]
+      }
+    ]
+  }
+}

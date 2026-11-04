@@ -1,0 +1,10 @@
+[gd_resource type="FontVariation" load_steps=4 format=3]
+
+[ext_resource type="FontFile" path="res://assets/fonts/ZenMaruGothic-Medium.ttf" id="body"]
+[ext_resource type="FontFile" path="res://assets/fonts/NotoSansJP-Regular.otf" id="fallback"]
+
+[ext_resource type="FontFile" path="res://assets/fonts/NotoSansSC-Regular.otf" id="fallback_zh"]
+
+[resource]
+base_font = ExtResource("body")
+fallbacks = Array[Font]([ExtResource("fallback"), ExtResource("fallback_zh")])

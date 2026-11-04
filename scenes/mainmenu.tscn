@@ -1,0 +1,193 @@
+[gd_scene load_steps=16 format=3 uid="uid://csir8gmtfm2ch"]
+
+[ext_resource type="Script" path="res://scripts/mainmenu.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/button_feedback.gd" id="11_dvy1x"]
+[ext_resource type="Texture2D" path="res://assets/art/regions/ui__icons__play.tres" id="22_8gnf8"]
+[ext_resource type="Texture2D" path="res://assets/art/regions/ui__icons__restart.tres" id="24_0w2iw"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/button_primary.tres" id="journal_button_primary"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/button_primary_hover.tres" id="journal_button_primary_hover"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/button_primary_pressed.tres" id="journal_button_primary_pressed"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/outer_frame.tres" id="journal_outer_frame"]
+[ext_resource type="Texture2D" uid="uid://b868wjkvn6lok" path="res://assets/art/title.png" id="title_logo"]
+[ext_resource type="PackedScene" path="res://scenes/ui/background.tscn" id="ui_background"]
+[ext_resource type="PackedScene" path="res://scenes/ui/credits_dialog.tscn" id="ui_credits_dialog"]
+[ext_resource type="PackedScene" path="res://scenes/ui/menu_preview.tscn" id="ui_menu_preview"]
+[ext_resource type="PackedScene" uid="uid://bohl4m8xj8gun" path="res://scenes/ui/menu_settings.tscn" id="ui_menu_settings"]
+[ext_resource type="PackedScene" path="res://scenes/ui/restart_dialog.tscn" id="ui_restart_dialog"]
+[ext_resource type="Theme" path="res://assets/ui/game_theme.tres" id="ui_theme"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("ui_theme")
+script = ExtResource("1")
+
+[node name="ReplaceableBackground" parent="." instance=ExtResource("ui_background")]
+
+[node name="Interface" type="Control" parent="."]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -195.0
+offset_right = 195.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="JournalFrame" type="Panel" parent="Interface"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("journal_outer_frame")
+
+[node name="Footer" type="Label" parent="Interface"]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = -35.0
+offset_right = -28.0
+offset_bottom = -11.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.376, 0.396, 0.302, 1)
+theme_override_font_sizes/font_size = 14
+text = "非官方同人作品"
+horizontal_alignment = 1
+metadata/i18n_source = "非官方同人作品"
+
+[node name="MenuColumn" type="VBoxContainer" parent="Interface"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 28.0
+offset_top = 38.0
+offset_right = -28.0
+offset_bottom = -55.0
+grow_horizontal = 2
+theme_override_constants/separation = 10
+
+[node name="Title" type="TextureRect" parent="Interface/MenuColumn"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("title_logo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PreviewPanel" parent="Interface/MenuColumn" instance=ExtResource("ui_menu_preview")]
+
+[node name="SaveInfo" type="Label" parent="Interface/MenuColumn"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.376, 0.396, 0.302, 1)
+theme_override_font_sizes/font_size = 14
+text = "浇点水。"
+horizontal_alignment = 1
+metadata/i18n_source = ""
+
+[node name="StartButton" type="Button" parent="Interface/MenuColumn"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+tooltip_text = "开始栽培"
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_pressed_color = Color(0.184, 0.251, 0.169, 1)
+theme_override_colors/font_hover_color = Color(0.184, 0.251, 0.169, 1)
+theme_override_colors/font_pressed_color = Color(0.184, 0.251, 0.169, 1)
+theme_override_colors/font_focus_color = Color(0.184, 0.251, 0.169, 1)
+theme_override_colors/font_color = Color(0.184, 0.251, 0.169, 1)
+theme_override_colors/icon_normal_color = Color(0.184, 0.251, 0.169, 1)
+theme_override_colors/icon_focus_color = Color(0.184, 0.251, 0.169, 1)
+theme_override_colors/icon_pressed_color = Color(0.184, 0.251, 0.169, 1)
+theme_override_colors/icon_hover_color = Color(0.184, 0.251, 0.169, 1)
+theme_override_constants/icon_max_width = 24
+theme_override_font_sizes/font_size = 20
+theme_override_styles/hover = ExtResource("journal_button_primary_hover")
+theme_override_styles/pressed = ExtResource("journal_button_primary_pressed")
+theme_override_styles/normal = ExtResource("journal_button_primary")
+text = "开始栽培"
+icon = ExtResource("22_8gnf8")
+expand_icon = true
+metadata/i18n_source = "开始栽培"
+
+[node name="ClickRipple" type="Control" parent="Interface/MenuColumn/StartButton"]
+clip_contents = true
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("11_dvy1x")
+
+[node name="NewButton" type="Button" parent="Interface/MenuColumn"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+tooltip_text = "重新开始"
+mouse_default_cursor_shape = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/icon_max_width = 24
+text = "重新开始"
+icon = ExtResource("24_0w2iw")
+expand_icon = true
+metadata/i18n_source = "重新开始"
+
+[node name="ClickRipple" type="Control" parent="Interface/MenuColumn/NewButton"]
+clip_contents = true
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("11_dvy1x")
+
+[node name="Settings" parent="Interface/MenuColumn" instance=ExtResource("ui_menu_settings")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ModalLayer" type="Control" parent="."]
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="ConfirmShade" type="ColorRect" parent="ModalLayer"]
+unique_name_in_owner = true
+visible = false
+z_index = 20
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+color = Color(0.1, 0.075, 0.05, 0.35)
+
+[node name="Frame" type="Control" parent="ModalLayer"]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -195.0
+offset_right = 195.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="RestartDialog" parent="ModalLayer/Frame" instance=ExtResource("ui_restart_dialog")]
+
+[node name="CreditsDialog" parent="ModalLayer/Frame" instance=ExtResource("ui_credits_dialog")]
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 430.0

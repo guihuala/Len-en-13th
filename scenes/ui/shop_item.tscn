@@ -1,0 +1,171 @@
+[gd_scene load_steps=14 format=3]
+
+[ext_resource type="Script" path="res://scripts/button_feedback.gd" id="12_jsio6"]
+[ext_resource type="Texture2D" path="res://assets/art/regions/items__watering_can.tres" id="29_jh7rh"]
+[ext_resource type="Texture2D" path="res://assets/art/regions/ui__icons__lock.tres" id="30_csl2u"]
+[ext_resource type="Script" path="res://scripts/tooltip_button.gd" id="help_button"]
+[ext_resource type="Script" path="res://scripts/tooltip_card.gd" id="help_card"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/button_disabled.tres" id="journal_button_disabled"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/button_hover.tres" id="journal_button_hover"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/button_pressed.tres" id="journal_button_pressed"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/button_secondary.tres" id="journal_button_secondary"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/focus_ring.tres" id="journal_focus_ring"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/item_card.tres" id="journal_item_card"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/plain.tres" id="plain"]
+
+[ext_resource type="Theme" path="res://assets/ui/game_theme.tres" id="ui_theme"]
+
+[node name="ShopItem" type="Panel"]
+custom_minimum_size = Vector2(0, 104)
+layout_mode = 2
+offset_right = 334.0
+offset_bottom = 104.0
+theme = ExtResource("ui_theme")
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("journal_item_card")
+script = ExtResource("help_card")
+
+[node name="Icon" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.45)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -22.0
+offset_right = 44.0
+offset_bottom = 22.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("29_jh7rh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 52.0
+offset_top = 4.0
+offset_right = -132.0
+offset_bottom = 32.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.22, 0.184, 0.137, 1)
+theme_override_font_sizes/font_size = 14
+text = "商品名称"
+autowrap_mode = 3
+
+[node name="Effect" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 52.0
+offset_top = 36.0
+offset_right = -132.0
+offset_bottom = 62.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.4, 0.337, 0.243, 1)
+theme_override_font_sizes/font_size = 14
+text = "效果"
+clip_text = true
+
+[node name="Price" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 52.0
+offset_top = 66.0
+offset_right = -132.0
+offset_bottom = 94.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.22, 0.184, 0.137, 1)
+theme_override_font_sizes/font_size = 14
+text = "持有 0"
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="Purchase" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -36.0
+offset_bottom = 36.0
+mouse_filter = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="BuyButton" type="Button" parent="Purchase"]
+custom_minimum_size = Vector2(120, 48)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/icon_max_width = 16
+theme_override_font_sizes/font_size = 12
+theme_override_styles/focus = ExtResource("journal_focus_ring")
+theme_override_styles/disabled = ExtResource("journal_button_disabled")
+theme_override_styles/hover = ExtResource("journal_button_hover")
+theme_override_styles/pressed = ExtResource("journal_button_pressed")
+theme_override_styles/normal = ExtResource("journal_button_secondary")
+disabled = true
+text = "购买"
+icon = ExtResource("30_csl2u")
+expand_icon = true
+script = ExtResource("help_button")
+metadata/stable_feedback_bounds = true
+
+[node name="ClickRipple" type="Control" parent="Purchase/BuyButton"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("12_jsio6")
+
+[node name="Payback" type="Label" parent="Purchase"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 11
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="ItemHelp" type="Button" parent="Icon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_default_cursor_shape = 2
+tooltip_text = "查看道具说明"
+theme_override_styles/normal = ExtResource("plain")
+theme_override_styles/hover = ExtResource("plain")
+theme_override_styles/pressed = ExtResource("plain")
+theme_override_styles/disabled = ExtResource("plain")
+theme_override_styles/focus = ExtResource("plain")
+script = ExtResource("help_button")
+
+[node name="ClickRipple" type="Control" parent="Icon/ItemHelp"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("12_jsio6")
+
+[node name="Badge" type="Label" parent="Icon/ItemHelp"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 44.0
+offset_bottom = 44.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.27, 0.36, 0.21, 1)
+theme_override_font_sizes/font_size = 14
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1

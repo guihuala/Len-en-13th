@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/background.gd" id="9_vlm4m"]
+[ext_resource type="Texture2D" path="res://assets/art/backgrounds/nature_01.png" id="15_lqgot"]
+[ext_resource type="Script" path="res://scripts/studio_view.gd" id="16_1fsba"]
+[ext_resource type="Texture2D" path="res://assets/art/regions/backgrounds__nature__cloud.tres" id="scene_cloud"]
+
+[node name="Background" type="Control"]
+z_index = -40
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("9_vlm4m")
+
+[node name="Image" type="TextureRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
+clip_contents = true
+texture = ExtResource("15_lqgot")
+script = ExtResource("16_1fsba")
+exposure = 0.43
+
+[node name="OldView" type="TextureRect" parent="Image"]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Cloud1" type="TextureRect" parent="Image"]
+layout_mode = 0
+mouse_filter = 2
+expand_mode = 1
+texture = ExtResource("scene_cloud")
+offset_left = 15.0
+offset_top = 30.0
+offset_right = 125.0
+offset_bottom = 70.0
+
+[node name="Cloud2" type="TextureRect" parent="Image"]
+layout_mode = 0
+mouse_filter = 2
+expand_mode = 1
+texture = ExtResource("scene_cloud")
+offset_left = 125.0
+offset_top = 55.0
+offset_right = 235.0
+offset_bottom = 95.0
+
+[node name="Cloud3" type="TextureRect" parent="Image"]
+layout_mode = 0
+mouse_filter = 2
+expand_mode = 1
+texture = ExtResource("scene_cloud")
+offset_left = 235.0
+offset_top = 80.0
+offset_right = 345.0
+offset_bottom = 120.0
+

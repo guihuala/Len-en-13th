@@ -1,0 +1,114 @@
+[gd_scene load_steps=18 format=3 uid="uid://cxpch37s037a1"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/button_feedback.gd" id="12_jsio6"]
+[ext_resource type="Texture2D" path="res://assets/art/regions/ui__icons__menu.tres" id="44_founr"]
+[ext_resource type="PackedScene" path="res://scenes/ui/screen_feedback.tscn" id="feedback"]
+[ext_resource type="Script" path="res://scripts/tooltip_button.gd" id="help_button"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/outer_frame.tres" id="journal_outer_frame"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/button_square_hover.tres" id="square_hover"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/button_square_normal.tres" id="square_normal"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/button_square_pressed.tres" id="square_pressed"]
+[ext_resource type="PackedScene" path="res://scenes/ui/background.tscn" id="ui_background"]
+[ext_resource type="PackedScene" path="res://scenes/ui/debug_panel.tscn" id="ui_debug_panel"]
+[ext_resource type="PackedScene" uid="uid://bbcsxbuhuyp7d" path="res://scenes/ui/plant_panel.tscn" id="ui_plant_panel"]
+[ext_resource type="PackedScene" uid="uid://cml0rjm3eee3k" path="res://scenes/ui/shop_panel.tscn" id="ui_shop_panel"]
+[ext_resource type="PackedScene" uid="uid://j1lpfiwtvday" path="res://scenes/ui/stats_panel.tscn" id="ui_stats_panel"]
+[ext_resource type="PackedScene" uid="uid://dvnf3b6vx0p5y" path="res://scenes/ui/story_dialog.tscn" id="ui_story_dialog"]
+[ext_resource type="Theme" path="res://assets/ui/game_theme.tres" id="ui_theme"]
+[ext_resource type="PackedScene" path="res://scenes/ui/tutorial.tscn" id="ui_tutorial"]
+
+[node name="Cultivation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("ui_theme")
+script = ExtResource("1")
+
+[node name="ReplaceableBackground" parent="." instance=ExtResource("ui_background")]
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+volume_db = -22.0
+
+[node name="Tutorial" parent="." instance=ExtResource("ui_tutorial")]
+
+[node name="Interface" type="Control" parent="."]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -195.0
+offset_right = 195.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="JournalFrame" type="Panel" parent="Interface"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("journal_outer_frame")
+
+[node name="PlantPanel" parent="Interface" instance=ExtResource("ui_plant_panel")]
+offset_left = 21.0
+offset_right = -21.0
+grow_vertical = 2
+
+[node name="ShopPanel" parent="Interface" instance=ExtResource("ui_shop_panel")]
+grow_vertical = 0
+
+[node name="MenuButton" type="Button" parent="Interface"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -68.0
+offset_top = 36.0
+offset_right = -24.0
+offset_bottom = 80.0
+grow_horizontal = 0
+pivot_offset = Vector2(22, 22)
+tooltip_text = "菜单"
+mouse_default_cursor_shape = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/icon_max_width = 24
+theme_override_font_sizes/font_size = 16
+theme_override_styles/hover = ExtResource("square_hover")
+theme_override_styles/pressed = ExtResource("square_pressed")
+theme_override_styles/normal = ExtResource("square_normal")
+icon = ExtResource("44_founr")
+expand_icon = true
+script = ExtResource("help_button")
+metadata/stable_feedback_bounds = true
+
+[node name="ClickRipple" type="Control" parent="Interface/MenuButton"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("12_jsio6")
+
+[node name="Stats" parent="Interface" instance=ExtResource("ui_stats_panel")]
+
+[node name="DebugPanel" parent="Interface" instance=ExtResource("ui_debug_panel")]
+
+[node name="ModalLayer" parent="." instance=ExtResource("ui_story_dialog")]
+layout_mode = 1
+
+[node name="ScreenFeedback" parent="." instance=ExtResource("feedback")]

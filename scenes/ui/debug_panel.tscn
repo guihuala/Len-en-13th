@@ -1,0 +1,143 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/button_feedback.gd" id="12_jsio6"]
+[ext_resource type="Theme" path="res://assets/ui/game_theme.tres" id="ui_theme"]
+
+[node name="DebugPanel" type="Panel"]
+unique_name_in_owner = true
+visible = false
+z_index = 30
+layout_mode = 0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -196.0
+offset_right = -16.0
+offset_bottom = 196.0
+grow_horizontal = 2
+theme = ExtResource("ui_theme")
+
+[node name="Label155" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 15.0
+offset_right = 16.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(0.22, 0.184, 0.137, 1)
+theme_override_font_sizes/font_size = 20
+text = "开发后台 / F1"
+
+[node name="Action1" type="Button" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+offset_left = 16.0
+offset_top = 55.0
+offset_right = -16.0
+offset_bottom = 103.0
+grow_horizontal = 2
+mouse_default_cursor_shape = 2
+text = "增加 200 生长值"
+
+[node name="ClickRipple" type="Control" parent="Action1"]
+clip_contents = true
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("12_jsio6")
+
+[node name="Action2" type="Button" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+offset_left = 16.0
+offset_top = 109.0
+offset_right = -16.0
+offset_bottom = 157.0
+grow_horizontal = 2
+mouse_default_cursor_shape = 2
+text = "增加 2,000 生长值"
+
+[node name="ClickRipple" type="Control" parent="Action2"]
+clip_contents = true
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("12_jsio6")
+
+[node name="Action3" type="Button" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+offset_left = 16.0
+offset_top = 163.0
+offset_right = -16.0
+offset_bottom = 211.0
+grow_horizontal = 2
+mouse_default_cursor_shape = 2
+text = "跳至异变"
+
+[node name="ClickRipple" type="Control" parent="Action3"]
+clip_contents = true
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("12_jsio6")
+
+[node name="Action4" type="Button" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+offset_left = 16.0
+offset_top = 217.0
+offset_right = -16.0
+offset_bottom = 265.0
+grow_horizontal = 2
+mouse_default_cursor_shape = 2
+text = "补足结局资源"
+
+[node name="ClickRipple" type="Control" parent="Action4"]
+clip_contents = true
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("12_jsio6")
+
+[node name="Action5" type="Button" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+offset_left = 16.0
+offset_top = 271.0
+offset_right = -16.0
+offset_bottom = 319.0
+grow_horizontal = 2
+mouse_default_cursor_shape = 2
+text = "重播剧情"
+
+[node name="ClickRipple" type="Control" parent="Action5"]
+clip_contents = true
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("12_jsio6")
+
+[node name="Action6" type="Button" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+offset_left = 16.0
+offset_top = 325.0
+offset_right = -16.0
+offset_bottom = 373.0
+grow_horizontal = 2
+mouse_default_cursor_shape = 2
+text = "关闭后台"
+
+[node name="ClickRipple" type="Control" parent="Action6"]
+clip_contents = true
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("12_jsio6")

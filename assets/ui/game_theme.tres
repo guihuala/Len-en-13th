@@ -1,0 +1,47 @@
+[gd_resource type="Theme" load_steps=9 format=3]
+
+[ext_resource type="FontVariation" path="res://assets/fonts/rounded_zh.tres" id="7_727j4"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/panel_paper.tres" id="journal_panel_paper"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/button_secondary.tres" id="journal_button_secondary"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/button_hover.tres" id="journal_button_hover"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/button_pressed.tres" id="journal_button_pressed"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/button_disabled.tres" id="journal_button_disabled"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/focus_ring.tres" id="journal_focus_ring"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/panel_dialog.tres" id="tooltip_paper"]
+[resource]
+default_font = ExtResource("7_727j4")
+default_font_size = 16
+Button/colors/font_color = Color(0.22, 0.184, 0.137, 1)
+Button/colors/font_disabled_color = Color(0.447059, 0.47451, 0.427451, 1)
+Button/colors/font_focus_color = Color(0.22, 0.184, 0.137, 1)
+Button/colors/font_hover_color = Color(0.22, 0.184, 0.137, 1)
+Button/colors/font_hover_pressed_color = Color(0.22, 0.184, 0.137, 1)
+Button/colors/font_pressed_color = Color(0.22, 0.184, 0.137, 1)
+Button/colors/icon_disabled_color = Color(0.447059, 0.47451, 0.427451, 1)
+Button/colors/icon_focus_color = Color(0.22, 0.184, 0.137, 1)
+Button/colors/icon_hover_color = Color(0.22, 0.184, 0.137, 1)
+Button/colors/icon_hover_pressed_color = Color(0.22, 0.184, 0.137, 1)
+Button/colors/icon_normal_color = Color(0.22, 0.184, 0.137, 1)
+Button/colors/icon_pressed_color = Color(0.22, 0.184, 0.137, 1)
+Button/styles/disabled = ExtResource("journal_button_disabled")
+Button/styles/focus = ExtResource("journal_focus_ring")
+OptionButton/styles/focus = ExtResource("journal_focus_ring")
+Button/styles/hover = ExtResource("journal_button_hover")
+Button/styles/normal = ExtResource("journal_button_secondary")
+Button/styles/pressed = ExtResource("journal_button_pressed")
+Label/colors/font_color = Color(0.22, 0.184, 0.137, 1)
+Panel/styles/panel = ExtResource("journal_panel_paper")
+
+TooltipPanel/styles/panel = ExtResource("tooltip_paper")
+TooltipLabel/fonts/font = ExtResource("7_727j4")
+TooltipLabel/font_sizes/font_size = 16
+TooltipLabel/colors/font_color = Color(0.22, 0.184, 0.137, 1)
+
+PopupMenu/styles/panel = ExtResource("journal_panel_paper")
+PopupMenu/styles/hover = ExtResource("journal_button_hover")
+PopupMenu/colors/font_color = Color(0.22, 0.184, 0.137, 1)
+PopupMenu/colors/font_hover_color = Color(0.22, 0.184, 0.137, 1)
+VScrollBar/styles/scroll = ExtResource("journal_button_disabled")
+VScrollBar/styles/grabber = ExtResource("journal_button_secondary")
+VScrollBar/styles/grabber_highlight = ExtResource("journal_button_hover")
+VScrollBar/styles/grabber_pressed = ExtResource("journal_button_pressed")

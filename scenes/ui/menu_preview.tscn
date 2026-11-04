@@ -1,0 +1,116 @@
+[gd_scene load_steps=10 format=3 uid="uid://c0n1l0kv25351"]
+
+[ext_resource type="Shader" path="res://shaders/paper_background.gdshader" id="13_6fp4u"]
+[ext_resource type="Texture2D" uid="uid://l34ffsx8scbo" path="res://assets/art/backgrounds/nature_01.png" id="14_73c5h"]
+[ext_resource type="Script" path="res://scripts/studio_view.gd" id="15_s42an"]
+[ext_resource type="Script" path="res://scripts/tree.gd" id="16_msle1"]
+[ext_resource type="Script" path="res://scripts/editor_preview.gd" id="18_enysk"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/panel_garden.tres" id="journal_panel_garden"]
+[ext_resource type="Texture2D" path="res://assets/art/regions/backgrounds__nature__cloud.tres" id="scene_cloud"]
+[ext_resource type="Theme" path="res://assets/ui/game_theme.tres" id="ui_theme"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3r8vn"]
+shader = ExtResource("13_6fp4u")
+shader_parameter/motion_strength = 0.0
+shader_parameter/grain_strength = 0.003
+shader_parameter/light_strength = 0.006
+shader_parameter/incident_strength = 0.0
+shader_parameter/stage_tint = Color(0.901961, 0.913725, 0.882353, 1)
+shader_parameter/exposure = 1.06
+
+[node name="PreviewPanel" type="Panel"]
+unique_name_in_owner = true
+clip_contents = true
+custom_minimum_size = Vector2(0, 168)
+size_flags_vertical = 3
+theme = ExtResource("ui_theme")
+theme_override_styles/panel = ExtResource("journal_panel_garden")
+
+[node name="StudioView" type="TextureRect" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_3r8vn")
+clip_contents = true
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = -7.0
+offset_bottom = -7.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("14_73c5h")
+expand_mode = 1
+stretch_mode = 6
+script = ExtResource("15_s42an")
+
+[node name="OldView" type="TextureRect" parent="StudioView"]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Cloud1" type="TextureRect" parent="StudioView"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 30.0
+offset_right = 125.0
+offset_bottom = 70.0
+mouse_filter = 2
+texture = ExtResource("scene_cloud")
+expand_mode = 1
+
+[node name="Cloud2" type="TextureRect" parent="StudioView"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 55.0
+offset_right = 235.0
+offset_bottom = 95.0
+mouse_filter = 2
+texture = ExtResource("scene_cloud")
+expand_mode = 1
+
+[node name="Cloud3" type="TextureRect" parent="StudioView"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 80.0
+offset_right = 345.0
+offset_bottom = 120.0
+mouse_filter = 2
+texture = ExtResource("scene_cloud")
+expand_mode = 1
+
+[node name="PreviewArea" type="Control" parent="."]
+unique_name_in_owner = true
+clip_contents = true
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 18.0
+offset_right = -18.0
+offset_bottom = -18.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="TreePreview" type="Control" parent="PreviewArea"]
+unique_name_in_owner = true
+clip_contents = true
+anchors_preset = 0
+offset_right = 270.0
+offset_bottom = 225.64
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+script = ExtResource("16_msle1")
+
+[node name="EditorTreePreview" type="Control" parent="PreviewArea"]
+clip_contents = true
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+mouse_filter = 2
+script = ExtResource("18_enysk")

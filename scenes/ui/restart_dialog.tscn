@@ -1,0 +1,99 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/button_feedback.gd" id="11_dvy1x"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/panel_dialog.tres" id="journal_panel_dialog"]
+[ext_resource type="Theme" path="res://assets/ui/game_theme.tres" id="ui_theme"]
+
+[node name="RestartDialog" type="Panel"]
+unique_name_in_owner = true
+visible = false
+z_index = 21
+layout_mode = 0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -114.0
+offset_right = -20.0
+offset_bottom = 114.0
+grow_horizontal = 2
+theme_override_styles/panel = ExtResource("journal_panel_dialog")
+theme = ExtResource("ui_theme")
+
+[node name="ConfirmTitle" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_right = 1.0
+offset_left = 18.0
+offset_top = 16.0
+offset_right = -18.0
+offset_bottom = 50.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.22, 0.184, 0.137, 1)
+theme_override_font_sizes/font_size = 20
+text = "重新开始？"
+horizontal_alignment = 1
+metadata/i18n_source = "重新开始？"
+
+[node name="ConfirmBody" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_right = 1.0
+offset_left = 18.0
+offset_top = 65.0
+offset_right = -18.0
+offset_bottom = 135.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.4, 0.337, 0.243, 1)
+theme_override_font_sizes/font_size = 16
+text = "当前进度将清空。确定重新开始吗？"
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/i18n_source = "当前进度将清空。确定重新开始吗？"
+
+[node name="CancelButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = -70.0
+offset_right = -4.0
+offset_bottom = -18.0
+grow_horizontal = 2
+mouse_default_cursor_shape = 2
+text = "还是算了"
+metadata/i18n_source = "还是算了"
+
+[node name="ClickRipple" type="Control" parent="CancelButton"]
+clip_contents = true
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("11_dvy1x")
+
+[node name="RestartButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -70.0
+offset_right = -18.0
+offset_bottom = -18.0
+grow_horizontal = 2
+mouse_default_cursor_shape = 2
+text = "重新开始"
+metadata/i18n_source = "重新开始"
+
+[node name="ClickRipple" type="Control" parent="RestartButton"]
+clip_contents = true
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("11_dvy1x")

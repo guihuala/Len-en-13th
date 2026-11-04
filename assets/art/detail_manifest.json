@@ -1,0 +1,29 @@
+{
+  "pages": {
+    "common.png": {
+      "detail": "common_detail.png",
+      "sha256": "fc8654ba27dde234978c148639e0753300759ecb10d0294d3169c144f02b6d49",
+      "size": [
+        1280,
+        960
+      ]
+    },
+    "05_pending_items_props.png": {
+      "detail": "05_pending_items_props_detail.png",
+      "sha256": "b188fbcb9e985107d7b862cb0ca0db0f03d411c83bb8a89a62fb9d9126977019",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    "06_pending_story.png": {
+      "detail": "06_pending_story_detail.png",
+      "sha256": "24eda0fffba0484345e44c7ff17eb3c0d799246207479026c9eb940a20ea76f8",
+      "size": [
+        1248,
+        1376
+      ]
+    }
+  },
+  "region_count": 19
+}

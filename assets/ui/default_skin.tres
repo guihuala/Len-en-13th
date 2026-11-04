@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui_skin.gd" id="script"]
+[ext_resource type="Texture2D" path="res://assets/art/backgrounds/nature_01.png" id="menu_background"]
+[ext_resource type="Texture2D" path="res://assets/art/backgrounds/nature_01.png" id="game_background"]
+[ext_resource type="Shader" path="res://shaders/paper_background.gdshader" id="paper_shader"]
+
+[resource]
+script = ExtResource("script")
+menu_background = ExtResource("menu_background")
+game_background = ExtResource("game_background")
+paper_shader = ExtResource("paper_shader")

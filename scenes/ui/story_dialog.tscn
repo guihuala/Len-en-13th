@@ -1,0 +1,125 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvnf3b6vx0p5y"]
+
+[ext_resource type="Texture2D" path="res://assets/art/regions/tree__mini_tabinoki.tres" id="45_x5kdb"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/panel_dialog.tres" id="journal_panel_dialog"]
+[ext_resource type="Theme" path="res://assets/ui/game_theme.tres" id="ui_theme"]
+
+[node name="ModalLayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("ui_theme")
+
+[node name="ModalShade" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = 19
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+color = Color(0.1, 0.075, 0.05, 0.35)
+
+[node name="Frame" type="Control" parent="."]
+anchors_preset = 0
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -195.0
+offset_right = 195.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="Dialog" type="Panel" parent="Frame"]
+unique_name_in_owner = true
+visible = false
+z_index = 20
+layout_mode = 0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -536.0
+offset_right = -16.0
+offset_bottom = -24.0
+grow_horizontal = 2
+focus_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = ExtResource("journal_panel_dialog")
+
+[node name="DialogRail" type="ColorRect" parent="Frame/Dialog"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = 36.0
+grow_horizontal = 2
+mouse_filter = 2
+color = Color(0.12549, 0.152941, 0.137255, 1)
+
+[node name="Content" type="VBoxContainer" parent="Frame/Dialog"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 18.0
+offset_right = -18.0
+offset_bottom = -18.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="DialogTitle" type="Label" parent="Frame/Dialog/Content"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.839216, 0.909804, 0.733333, 1)
+theme_override_font_sizes/font_size = 14
+
+[node name="SpeakerRow" type="HBoxContainer" parent="Frame/Dialog/Content"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 14
+
+[node name="PortraitSlot" type="Control" parent="Frame/Dialog/Content/SpeakerRow"]
+unique_name_in_owner = true
+clip_contents = true
+custom_minimum_size = Vector2(44, 48)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="PortraitImage" type="TextureRect" parent="Frame/Dialog/Content/SpeakerRow/PortraitSlot"]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+mouse_filter = 2
+texture = ExtResource("45_x5kdb")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DialogSpeaker" type="Label" parent="Frame/Dialog/Content/SpeakerRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.22, 0.184, 0.137, 1)
+theme_override_font_sizes/font_size = 20
+text = "旅之木"
+
+[node name="DialogBody" type="Label" parent="Frame/Dialog/Content"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.22, 0.184, 0.137, 1)
+theme_override_font_sizes/font_size = 20
+text = "こんの木ー！今天来种树～"
+autowrap_mode = 3

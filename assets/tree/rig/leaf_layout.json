@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "local_root": [
+    40,
+    0
+  ],
+  "layouts": {
+    "stage_03_branching": [
+      {
+        "name": "002_叶片",
+        "base": [
+          153,
+          270
+        ],
+        "angle": -164,
+        "length_scale": 0.88,
+        "width_scale": 0.8,
+        "side": "left"
+      },
+      {
+        "name": "003_叶片",
+        "base": [
+          352,
+          274
+        ],
+        "angle": -26,
+        "length_scale": 0.96,
+        "width_scale": 0.82,
+        "side": "right"
+      },
+      {
+        "name": "004_叶片",
+        "base": [
+          156,
+          190
+        ],
+        "angle": -152,
+        "length_scale": 0.76,
+        "width_scale": 0.7,
+        "side": "left"
+      },
+      {
+        "name": "005_叶片",
+        "base": [
+          341,
+          191
+        ],
+        "angle": -41,
+        "length_scale": 0.77,
+        "width_scale": 0.72,
+        "side": "right"
+      },
+      {
+        "name": "006_叶片",
+        "base": [
+          217,
+          284
+        ],
+        "angle": -131,
+        "length_scale": 0.44,
+        "width_scale": 0.55,
+        "side": "left"
+      },
+      {
+        "name": "007_叶片",
+        "base": [
+          277,
+          310
+        ],
+        "angle": -23,
+        "length_scale": 0.49,
+        "width_scale": 0.5,
+        "side": "right"
+      }
+    ],
+    "stage_04_incident": [
+      {
+        "name": "002_叶片",
+        "base": [
+          118,
+          269
+        ],
+        "angle": -159,
+        "length_scale": 1.0,
+        "width_scale": 0.82,
+        "side": "left"
+      },
+      {
+        "name": "003_叶片",
+        "base": [
+          379,
+          256
+        ],
+        "angle": -19,
+        "length_scale": 0.98,
+        "width_scale": 0.88,
+        "side": "right"
+      },
+      {
+        "name": "004_叶片",
+        "base": [
+          112,
+          205
+        ],
+        "angle": -150,
+        "length_scale": 0.87,
+        "width_scale": 0.78,
+        "side": "left"
+      },
+      {
+        "name": "005_叶片",
+        "base": [
+          372,
+          178
+        ],
+        "angle": -42,
+        "length_scale": 0.91,
+        "width_scale": 0.8,
+        "side": "right"
+      },
+      {
+        "name": "006_叶片",
+        "base": [
+          166,
+          150
+        ],
+        "angle": -149,
+        "length_scale": 0.74,
+        "width_scale": 0.7,
+        "side": "left"
+      },
+      {
+        "name": "007_叶片",
+        "base": [
+          324,
+          144
+        ],
+        "angle": -24,
+        "length_scale": 0.76,
+        "width_scale": 0.68,
+        "side": "right"
+      },
+      {
+        "name": "008_叶片",
+        "base": [
+          211,
+          315
+        ],
+        "angle": -139,
+        "length_scale": 0.54,
+        "width_scale": 0.55,
+        "side": "left"
+      },
+      {
+        "name": "009_叶片",
+        "base": [
+          278,
+          310
+        ],
+        "angle": -37,
+        "length_scale": 0.58,
+        "width_scale": 0.55,
+        "side": "right"
+      }
+    ]
+  },
+  "derived": {
+    "stage_05_flowering": {
+      "source": "stage_04_incident",
+      "scale": 0.55,
+      "offset": [
+        108,
+        0
+      ]
+    }
+  }
+}

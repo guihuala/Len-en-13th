@@ -1,0 +1,117 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/tutorial.gd" id="10_1kvca"]
+
+[ext_resource type="Script" path="res://scripts/button_feedback.gd" id="12_jsio6"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/panel_dialog.tres" id="journal_panel_dialog"]
+
+[ext_resource type="Theme" path="res://assets/ui/game_theme.tres" id="ui_theme"]
+
+[ext_resource type="StyleBox" path="res://assets/ui/styles/tutorial_highlight.tres" id="tutorial_highlight"]
+
+[node name="Tutorial" type="Control"]
+unique_name_in_owner = true
+visible = false
+z_index = 15
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+mouse_filter = 2
+script = ExtResource("10_1kvca")
+theme = ExtResource("ui_theme")
+
+[node name="Highlight" type="Panel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 27.0
+offset_top = 461.0
+offset_right = 363.0
+offset_bottom = 516.0
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("tutorial_highlight")
+
+[node name="Coach" type="Panel" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -167.0
+offset_top = 108.0
+offset_right = 167.0
+offset_bottom = 274.0
+grow_horizontal = 2
+theme_override_styles/panel = ExtResource("journal_panel_dialog")
+
+[node name="Heading" type="Label" parent="Coach"]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_right = 1.0
+offset_left = 12.0
+offset_top = 8.0
+offset_right = -96.0
+offset_bottom = 52.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.22, 0.184, 0.137, 1)
+theme_override_font_sizes/font_size = 16
+text = "1/4 浇三次水"
+
+[node name="Body" type="Label" parent="Coach"]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_right = 1.0
+offset_left = 12.0
+offset_top = 56.0
+offset_right = -12.0
+offset_bottom = 156.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.22, 0.184, 0.137, 1)
+theme_override_font_sizes/font_size = 16
+text = "点击中央的旅之木进行培养。
+0/3"
+autowrap_mode = 3
+
+[node name="SkipButton" type="Button" parent="Coach"]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -88.0
+offset_top = 8.0
+offset_right = -12.0
+offset_bottom = 52.0
+grow_horizontal = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 14
+text = "跳过引导"
+
+[node name="ClickRipple" type="Control" parent="Coach/SkipButton"]
+clip_contents = true
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("12_jsio6")
+
+[node name="DoneButton" type="Button" parent="Coach"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -88.0
+offset_top = 8.0
+offset_right = -12.0
+offset_bottom = 52.0
+grow_horizontal = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 14
+text = "知道了"
+
+[node name="ClickRipple" type="Control" parent="Coach/DoneButton"]
+clip_contents = true
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("12_jsio6")

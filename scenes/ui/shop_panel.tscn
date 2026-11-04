@@ -1,0 +1,117 @@
+[gd_scene load_steps=10 format=3 uid="uid://cml0rjm3eee3k"]
+
+[ext_resource type="Script" path="res://scripts/button_feedback.gd" id="12_jsio6"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/button_disabled.tres" id="journal_button_disabled"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/button_hover.tres" id="journal_button_hover"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/button_pressed.tres" id="journal_button_pressed"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/button_secondary.tres" id="journal_button_secondary"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/focus_ring.tres" id="journal_focus_ring"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/panel_drawer.tres" id="journal_plain"]
+[ext_resource type="Script" path="res://scripts/shop_toggle.gd" id="shop_toggle_script"]
+[ext_resource type="Theme" path="res://assets/ui/game_theme.tres" id="ui_theme"]
+
+[node name="ShopPanel" type="Panel"]
+layout_mode = 1
+unique_name_in_owner = true
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = -292.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("ui_theme")
+theme_override_styles/panel = ExtResource("journal_plain")
+
+[node name="ShopStageSelector" type="OptionButton" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = -166.0
+offset_bottom = 52.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 16
+
+[node name="ClickRipple" type="Control" parent="ShopStageSelector"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("12_jsio6")
+
+[node name="BuyModeButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -158.0
+offset_top = 8.0
+offset_right = -68.0
+offset_bottom = 52.0
+grow_horizontal = 2
+tooltip_text = "凑整"
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 14
+theme_override_styles/focus = ExtResource("journal_focus_ring")
+theme_override_styles/disabled = ExtResource("journal_button_disabled")
+theme_override_styles/hover = ExtResource("journal_button_hover")
+theme_override_styles/pressed = ExtResource("journal_button_pressed")
+theme_override_styles/normal = ExtResource("journal_button_secondary")
+text = "×1"
+
+[node name="ClickRipple" type="Control" parent="BuyModeButton"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("12_jsio6")
+
+[node name="ShopToggle" type="Button" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -60.0
+offset_top = 8.0
+offset_right = -16.0
+offset_bottom = 52.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 14
+script = ExtResource("shop_toggle_script")
+metadata/stable_feedback_bounds = true
+
+[node name="ClickRipple" type="Control" parent="ShopToggle"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("12_jsio6")
+
+[node name="ShopList" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 64.0
+offset_right = -16.0
+offset_bottom = -8.0
+grow_horizontal = 2
+theme_override_constants/separation = 8
+

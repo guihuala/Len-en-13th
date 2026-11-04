@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://j1lpfiwtvday"]
+
+[ext_resource type="StyleBox" path="res://assets/ui/styles/plain.tres" id="journal_plain"]
+[ext_resource type="Theme" path="res://assets/ui/game_theme.tres" id="ui_theme"]
+
+[node name="Stats" type="Panel"]
+unique_name_in_owner = true
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 26.0
+offset_top = 32.0
+offset_right = -82.0
+offset_bottom = 96.0
+grow_horizontal = 2
+theme = ExtResource("ui_theme")
+theme_override_styles/panel = ExtResource("journal_plain")
+
+[node name="GrowthCaption" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 132.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.4, 0.337, 0.243, 1)
+theme_override_font_sizes/font_size = 12
+text = "可用生长值"
+
+[node name="GrowthValue" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 12.0
+offset_top = 28.0
+offset_right = 132.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0.22, 0.184, 0.137, 1)
+theme_override_font_sizes/font_size = 22
+text = "0"
+
+[node name="RateCaption" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 150.0
+offset_top = 12.0
+offset_right = 270.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.4, 0.337, 0.243, 1)
+theme_override_font_sizes/font_size = 12
+text = "每秒增长"
+
+[node name="RateValue" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 150.0
+offset_top = 28.0
+offset_right = 270.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(0.22, 0.184, 0.137, 1)
+theme_override_font_sizes/font_size = 22
+text = "0"

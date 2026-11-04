@@ -1,0 +1,404 @@
+[
+  {
+    "id": "sprout",
+    "title": "今天种这个",
+    "speaker": "旅之木",
+    "lines": [
+      "こんの木ー！今天来种树～",
+      "找到了一个很适合种的东西。",
+      "……这个，是种子吧？",
+      "算了，浇水。",
+      "哦，长了！！",
+      "……",
+      "……这是谁的帽子？！",
+      "水壶和自动滴灌可以使用了。\n每次操作额外获得当前 1 秒的自动产量。"
+    ],
+    "speakers": [
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "系统",
+        "portrait": ""
+      }
+    ]
+  },
+  {
+    "id": "research",
+    "title": "研究结束",
+    "speaker": "玄鸟",
+    "lines": [
+      "这是什么？",
+      "树。",
+      "哪种树？",
+      "旅之木。",
+      "哦。",
+      "这就完了？！不研究一下吗？",
+      "不是已经告诉我了吗？",
+      "研究可以就这样结束的吗……？！",
+      "墨水肥料与扦插苗可以使用了。\n往水里兑一点……嗯，颜色先不管～。"
+    ],
+    "speakers": [
+      {
+        "name": "玄鸟",
+        "portrait": "tsubakura"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "玄鸟",
+        "portrait": "tsubakura"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "玄鸟",
+        "portrait": "tsubakura"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "玄鸟",
+        "portrait": "tsubakura"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "系统",
+        "portrait": ""
+      }
+    ]
+  },
+  {
+    "id": "cloning",
+    "title": "两位都不是",
+    "speaker": "薮雨",
+    "lines": [
+      "找到了！还有一个！",
+      "啊，是我。",
+      "啊，是我。",
+      "你是JynX吗？",
+      "不是哦～",
+      "我也不是。",
+      "那JynX呢？",
+      "次元花盆可以使用了。\n这边照料一下，那边也跟着长。真方便～！",
+      "本人数量：2；身份确认：0。"
+    ],
+    "speakers": [
+      {
+        "name": "薮雨",
+        "portrait": "yabusame"
+      },
+      {
+        "name": "旅之木 A",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木 B",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木 A",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木 B",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木 A",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "薮雨",
+        "portrait": "yabusame"
+      },
+      {
+        "name": "系统",
+        "portrait": ""
+      },
+      {
+        "name": "系统",
+        "portrait": ""
+      }
+    ]
+  },
+  {
+    "id": "incident",
+    "title": "今天的作业",
+    "speaker": "旅之木",
+    "lines": [
+      "好，今天做正事～！",
+      "看一下Game做到哪了。",
+      "桌面上并排放着两个文件夹：\n《连缘黑白世界》《连缘天影战记 金章》。",
+      "……",
+      "……这两个文件夹，是不是该打开一下？",
+      "算了，今天先休息～",
+      "作业电脑与根系调整架可以使用了。\n根往这边走～。别把养分送进文件夹里！"
+    ],
+    "speakers": [
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "画面",
+        "portrait": ""
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "系统",
+        "portrait": ""
+      }
+    ]
+  },
+  {
+    "id": "flowering",
+    "title": "园艺工具",
+    "speaker": "玄鸟",
+    "lines": [
+      "挡住了。",
+      "什么挡住了？",
+      "你的枝，菜单都点不到了。",
+      "那剪掉一点？",
+      "等、等等……！",
+      "怎么？",
+      "……没有普通剪刀吗？！",
+      "没带。",
+      "园艺用蛇丛剑及木ノ子观众席可以使用了。\n剪掉一点，新枝就有地方长……就一点哦？"
+    ],
+    "speakers": [
+      {
+        "name": "玄鸟",
+        "portrait": "tsubakura"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "玄鸟",
+        "portrait": "tsubakura"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "玄鸟",
+        "portrait": "tsubakura"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "玄鸟",
+        "portrait": "tsubakura"
+      },
+      {
+        "name": "系统",
+        "portrait": ""
+      }
+    ]
+  },
+  {
+    "id": "nursery",
+    "title": "观众比树多",
+    "speaker": "薮雨",
+    "lines": [
+      "下面长蘑菇了～！",
+      "哦，木ノ子さん。",
+      "こんの木ー！\n可以往左长一点吗～？",
+      "こんの木ー。",
+      "……",
+      "谁在指挥こんの木？！",
+      "观众席开启了！\n用阐里之瞳看一眼长势～。……谁又在喊往左？"
+    ],
+    "speakers": [
+      {
+        "name": "薮雨",
+        "portrait": "yabusame"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "弹幕",
+        "portrait": ""
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "系统",
+        "portrait": ""
+      }
+    ]
+  },
+  {
+    "id": "forest",
+    "title": "旅ノ木憲法（临时版）",
+    "speaker": "旅之木",
+    "lines": [
+      "等下……现在连菜单都是こんの木了？！",
+      "不行！这样下去得立规矩了。",
+      "第一条：本游戏中的旅之木，不负责解释自己的生长原理。",
+      "第二条：禁止以“优化产量”为由过度指挥旅之木。\n第三条：竹笋除外。",
+      "……第三条，是谁加的？！",
+      "修改人——玩家。",
+      "喂——！",
+      "已开放“旅ノ木憲法（栽培用）”。\n好了，各处按规矩长～。……竹笋也算各处！"
+    ],
+    "speakers": [
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅ノ木憲法（栽培用・临时）",
+        "portrait": ""
+      },
+      {
+        "name": "旅ノ木憲法（栽培用・临时）",
+        "portrait": ""
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "系统",
+        "portrait": ""
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "系统",
+        "portrait": ""
+      }
+    ]
+  },
+  {
+    "id": "ending",
+    "title": "结束直播",
+    "speaker": "旅之木",
+    "lines": [
+      "好，今天就到这吧。",
+      "……哦？",
+      "哦！这个倒是做完了？！",
+      "連縁Project 13周年おめでとう！",
+      "哦哦，十三周年！恭喜～！！",
+      "……",
+      "……所以，谁做的？",
+      "啊，你啊！辛苦了～",
+      "仍然可以继续栽培。"
+    ],
+    "speakers": [
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "贺卡",
+        "portrait": ""
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "旅之木",
+        "portrait": "tabinoki"
+      },
+      {
+        "name": "系统",
+        "portrait": ""
+      }
+    ]
+  }
+]

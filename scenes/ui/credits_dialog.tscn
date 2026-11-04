@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/button_feedback.gd" id="11_dvy1x"]
+[ext_resource type="StyleBox" path="res://assets/ui/styles/panel_dialog.tres" id="journal_panel_dialog"]
+[ext_resource type="Theme" path="res://assets/ui/game_theme.tres" id="ui_theme"]
+
+[node name="CreditsDialog" type="Panel"]
+unique_name_in_owner = true
+visible = false
+z_index = 30
+z_as_relative = false
+layout_mode = 0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -215.0
+offset_right = -20.0
+offset_bottom = 215.0
+theme_override_styles/panel = ExtResource("journal_panel_dialog")
+theme = ExtResource("ui_theme")
+
+[node name="CreditsTitle" type="Label" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+offset_left = 18.0
+offset_top = 16.0
+offset_right = -18.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0.145, 0.161, 0.173, 1)
+theme_override_font_sizes/font_size = 20
+text = "制作与鸣谢"
+horizontal_alignment = 1
+metadata/i18n_source = "制作与鸣谢"
+
+[node name="CreditsBody" type="RichTextLabel" parent="."]
+layout_mode = 0
+unique_name_in_owner = true
+anchor_right = 1.0
+offset_left = 22.0
+offset_top = 65.0
+offset_right = -22.0
+anchor_bottom = 1.0
+offset_bottom = -86.0
+scroll_active = true
+scroll_following = false
+fit_content = false
+theme_override_colors/default_color = Color(0.22, 0.184, 0.137, 1)
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+
+[node name="CloseCreditsButton" type="Button" parent="."]
+layout_mode = 0
+unique_name_in_owner = true
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = -66.0
+offset_right = -18.0
+offset_bottom = -18.0
+mouse_default_cursor_shape = 2
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+text = "返回"
+metadata/i18n_source = "返回"
+
+[node name="ClickRipple" type="Control" parent="CloseCreditsButton"]
+layout_mode = 0
+clip_contents = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("11_dvy1x")

@@ -1,0 +1,48 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="たびのきの木"
+run/main_scene="res://scenes/mainmenu.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="Godot/app_userdata/旅ノ木栽培計画 · 原型"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+config/icon="res://assets/art/game_icon.png"
+config/custom_user_dir_name.linux="godot/app_userdata/旅ノ木栽培計画 · 原型"
+
+[autoload]
+
+GameState="*res://scripts/game_state.gd"
+
+[display]
+
+window/size/viewport_width=390
+window/size/viewport_height=700
+window/size/window_width_override=390
+window/size/window_height_override=844
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=1
+
+[gui]
+
+timers/tooltip_delay_sec=0.25
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://localization/strings.zh_CN.translation", "res://localization/strings.ja.translation")
+locale/fallback="zh_CN"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.902, 0.914, 0.882, 1)

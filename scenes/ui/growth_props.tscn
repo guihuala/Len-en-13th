@@ -1,0 +1,113 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scripts/growth_props.gd" id="script"]
+[ext_resource type="Texture2D" path="res://assets/art/regions/story__work_laptop.tres" id="laptop"]
+[ext_resource type="Texture2D" path="res://assets/art/regions/story__constitution_notice.tres" id="notice"]
+[ext_resource type="Texture2D" path="res://assets/art/regions/tree__mini_tabinoki.tres" id="mini"]
+[ext_resource type="Texture2D" path="res://assets/art/regions/items__seed_bank.tres" id="audience"]
+[ext_resource type="Texture2D" path="res://assets/art/detail_regions/story__bamboo_shoot.tres" id="bamboo"]
+[ext_resource type="PackedScene" path="res://scenes/ui/growth_tonic.tscn" id="tonic"]
+
+[node name="GrowthProps" type="Control"]
+layout_mode = 1
+z_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 10.0
+mouse_filter = 2
+script = ExtResource("script")
+
+[node name="Laptop" type="TextureRect" parent="."]
+layout_mode = 1
+modulate = Color(0.88, 0.91, 0.84, 0.9)
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -48.0
+offset_right = 60.0
+offset_bottom = -4.0
+mouse_filter = 2
+texture = ExtResource("laptop")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ScreenActor" type="TextureRect" parent="Laptop"]
+layout_mode = 1
+anchor_left = 0.4
+anchor_top = 0.1
+anchor_right = 0.64
+anchor_bottom = 0.6
+mouse_filter = 2
+texture = ExtResource("mini")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Notice" type="TextureRect" parent="."]
+layout_mode = 1
+modulate = Color(0.88, 0.91, 0.84, 0.9)
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -48.0
+offset_right = -4.0
+offset_bottom = -4.0
+mouse_filter = 2
+texture = ExtResource("notice")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Audience" type="Control" parent="."]
+layout_mode = 1
+modulate = Color(0.91, 0.94, 0.86, 0.92)
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.0
+offset_top = -48.0
+offset_right = 76.0
+mouse_filter = 2
+
+[node name="Spectator1" type="TextureRect" parent="Audience"]
+offset_top = 24.0
+offset_right = 33.0
+offset_bottom = 48.0
+mouse_filter = 2
+texture = ExtResource("audience")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Spectator2" type="TextureRect" parent="Audience"]
+offset_left = 39.0
+offset_top = 19.0
+offset_right = 72.0
+offset_bottom = 43.0
+mouse_filter = 2
+texture = ExtResource("audience")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Spectator3" type="TextureRect" parent="Audience"]
+offset_left = 78.0
+offset_top = 24.0
+offset_right = 111.0
+offset_bottom = 48.0
+mouse_filter = 2
+texture = ExtResource("audience")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Bamboo" type="TextureRect" parent="Audience"]
+offset_left = 117.0
+offset_top = 5.0
+offset_right = 145.0
+offset_bottom = 43.0
+mouse_filter = 2
+texture = ExtResource("bamboo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="GrowthTonic" parent="." instance=ExtResource("tonic")]
